@@ -3,108 +3,42 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Backdeskwinter
+    <title>Backdesk
     </title>
     <link rel="alternate" href="http://localhost:7777/feed.xml" type="application/rss+xml" title="Digital content done right">
-    <link rel="stylesheet" id="foundation_google_fonts-css" href="//fonts.googleapis.com/css?family=Lato%3A300%2C600%7CRoboto%3A400%2C700%2C400italic%2C700italic&amp;amp;ver=2.2" type="text/css" media="">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400|Roboto:400,500,700,300,100" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
     <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
     <header class="header">
-      <div class="content-wrap">
-        <div class="logo">
-          <h1 class="heading-font"><a href="http://localhost:7777">Backdeskwinter</a></h1>
-          <p class="description">Digital content done right</p>
-        </div>
+      <div class="logo">
+        <h1>Backdesk</h1>
       </div>
+      <div class="menu"><a href="#"><i class="fa fa-bars"></i></a></div>
     </header>
-    <div id="content">
-      <div class="content-wrap">
+    <div class="wrapper">
+      <main>
         <article class="article intro">
           <header>
-            <p class="date"><span>05. January 2015</span></p>
-            <h2><a href="/articles/constructors/">Invocation Patterns: Constructors</a></h2>
+            <h3><a href="/articles/hello-world/">Hello, How can I help?</a></h3>
           </header>
-          <section class="content"><p>In his book ‘JavaScript: The good parts’, Douglas Crockford covers ‘invocation’ in some detail listing the four&nbsp;patterns:</p>
-<p>1 Method 
-2 Function
-3 Constructor
-4&nbsp;Apply</p>
-<p>It wasn’t until I read this chapter that I really got to grips with JavaScript. Since functions are ‘first class’ objects in JavaScript a lot naturally rests on how they are&nbsp;invoked. </p>
-<blockquote>
-<p>If the function was invoked with the new prefix and the return value is not an object, then this (the new object) is returned instead. 
-<cite>D.Crockford - JavaScript: The Good Parts</cite></p>
-</blockquote>
-<p>I see this pattern used quite often in projects I am involved in and I am keen to understand the benefits of it and the problem(s) it&nbsp;addresses.</p>
-<pre><code>var MyConstructor = require(&#39;myConstructor&#39;);
-
-createObject = function (configuration) {
-    return new MyConstructor(configuration);
-};
-
-module.exports = {
-    create : createObject
-};
-</code></pre><p>In my mind there’s redundancy in this example because all this is really does is stop me from using constructor invocation directly. In short it means I don’t have to use the ‘new’&nbsp;keyword.</p>
-<pre><code>var myConstructedItem = createObject(configuration);
-</code></pre><p>I think the intention here is to provide a factory-style api and I’d be an advocate of that if it hid away any kind of decision making like you might see in the example of the <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#factorypatternjavascript">factory pattern</a>.</p>
-<pre><code>createObject = function (type, configuration) {
-    var ObjClass;
-
-    switch(type) {
-        case &#39;x&#39; : ObjClass = new SomeConstructor;
-                   break;
-
-        default  : ObjClass = new OtherConstructor;
-                   break;
-    }
-
-    return new ObjClass(configuration);
-};
-
-module.exports = {
-    create : createObject
-};
-</code></pre><p>Clearly in the first example there isn’t any of that. It just returns a wrapper around a&nbsp;constructor. </p>
-<p>It’s worth noting that exported objects in CommonJS are ‘cached’ and that you’ll always get the same object/value every time you require in the module. So if you export a constructor, you’ll naturally get the same constructor each&nbsp;time.</p>
-<p>In my mind constructor functions are a factory in their own&nbsp;right:</p>
-<blockquote>
-<p>If the function was invoked with the new prefix and the return value is not an object, then this (the new object) is returned instead. 
-<cite>D.Crockford - JavaScript: The Good Parts</cite></p>
-</blockquote>
+          <section class="content"><p>I am a web veteran based in the South West of England, specializing in full stack JavaScript&nbsp;applications. </p>
+<p>I believe and actively invest in the notion that JavaScript and its emerging technologies are shaping the 
+future of the&nbsp;web.</p>
+<p>Feel free to <a href="mailto://enquiries@backdesk.io">get in touch</a>.</p>
 
           </section>
         </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>30. April 2013</span></p>
-            <h2><a href="/articles/hello-world/">README</a></h2>
-          </header>
-          <section class="content"><p>Welcome to your new blog! This is the default blog template with <span class="caps">RSS</span>, pagination and an archive. There are other templates available — run <code>wintersmith new --help</code> to list&nbsp;them.</p>
-
-            <p class="more"><a href="/articles/hello-world/">more</a></p>
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>01. April 2013</span></p>
-            <h2><a href="/articles/red-herring/">A red herring</a></h2>
-          </header>
-          <section class="content"><p>A long time ago, when the world was young — someone put some food on their tongue.
-They tasted the food, and thought it was nice. Most fruit liked it — but banana’s thought&nbsp;twice.</p>
-<p>
-            <p class="more"><a href="/articles/red-herring/">more</a></p>
-          </section>
-        </article>
-      </div>
-    </div>
-    <footer>
-      <div class="content-wrap">
-        <section class="about"><small><p>Backdesk Solutions Ltd is a limited company registered in England and
-Wales. Company registration No. 09224652. VAT Registration No. 200147179.</p>
+      </main>
+      <footer>
+        <div class="content-wrap">
+          <section class="about"><small><p>Backdesk Solutions Ltd is a limited company registered in England and
+Wales. Company registration No. 09224652. VAT registration No. 200147179.</p>
 </small></section>
-        <section class="copy"><small>&copy; 2014 Backdesk Solutions Ltd</small></section>
-      </div>
-    </footer>
+          <section class="copy"><small>&copy; 2015 Backdesk Solutions Ltd</small></section>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

@@ -1,0 +1,60 @@
+@import 'base';
+@import 'article';
+
+body {
+	margin: 0;
+}
+
+h3 a {
+	color: #121320;
+}
+
+.wrapper {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.header {
+	height: 200px;
+	background-color: rgb(47, 49, 82);
+	position: relative;
+}
+
+.icon {
+	height: 35px;
+	position: absolute;
+	bottom: 10px;
+	right: 5px;
+
+	img {
+		display: block;
+		max-height: 100%;
+	}
+}
+
+.logo {
+	padding: 2.5%;
+	background-color: rgba(0, 0, 0, 0.6);
+
+	h1 {
+		display: block;
+		width: 69%;
+		margin: 0 auto;
+		color: #fff;
+		text-align: center;
+		font-weight: 300;
+		font-size: 1.4em;
+		letter-spacing: -1px;
+	}
+}
+
+.menu {
+	position : absolute;
+	right: 0; top: 0;
+	
+	.fa-bars {
+		color: #fff;
+		font-size: 1.3em;
+		margin: 12px;
+	}
+}
