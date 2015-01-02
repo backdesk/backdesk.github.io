@@ -1,5 +1,7 @@
 $(function () {
 	$('#menu-btn').on('click', function () {
-		$('.menu-items').fadeToggle();
+		var items = $('.menu-items');
+
+		items.height((items.height() === 0) ? 'auto' : 0);
 	});
 });
