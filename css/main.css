@@ -80,6 +80,9 @@ article.intro header a {
     text-decoration: none;
     font-weight: 300; }
 
+.menu-items.collapse {
+  display: block; }
+
 body {
   margin: 0; }
 
