@@ -63,6 +63,23 @@ h4 {
 article.intro header a {
   text-decoration: none; }
 
+.menu-items {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+  box-sizing: border-box;
+  background-color: black; }
+  .menu-items li {
+    padding: 1em; }
+  .menu-items a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300; }
+
 body {
   margin: 0; }
 
