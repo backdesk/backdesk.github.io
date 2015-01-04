@@ -99,8 +99,8 @@ h3 a {
 .header {
   height: 200px;
   background: #A9C6CC url(http://tinyurl.com/kyghspr) no-repeat;
-  background-size: 67%;
-  background-position-y: 44px;
+  background-size: contain;
+  background-position-y: 32px;
   background-position-x: 50%;
   position: relative; }
 
