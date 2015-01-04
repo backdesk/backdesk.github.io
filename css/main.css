@@ -89,7 +89,8 @@ article.intro header a {
     font-weight: 300; }
 
 body {
-  margin: 0; }
+  margin: 0;
+  background-color: #eaeef5; }
 
 h3 a {
   color: #121320; }
