@@ -9,6 +9,15 @@
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
     <item>
+      <title>Taking the Backdesk</title>
+      <link>http://localhost:7777/articles/services/</link>
+      <pubDate>Tue, 30 Jun 2015 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">http://localhost:7777/articles/services/</guid>
+      <author></author>
+      <description>&lt;p&gt;test&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>Hello, how can I help?</title>
       <link>http://localhost:7777/articles/hello/</link>
       <pubDate>Tue, 30 Jun 2015 00:00:00 +0000</pubDate>
@@ -20,15 +29,6 @@ businesses towards more scalable composite applications powered by JavaScript.&l
 &lt;p&gt;The way we build the web is rapidly changing and I am passionate about being at the forefront.&lt;/p&gt;
 &lt;p&gt;If you’re looking for research-driven expertise to consult with you on your new or existing projects then
 please feel free to &lt;a href=&quot;mailto:enquiries@backdesk.io&quot;&gt;get in touch&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Taking the Backdesk</title>
-      <link>http://localhost:7777/articles/services/</link>
-      <pubDate>Tue, 30 Jun 2015 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">http://localhost:7777/articles/services/</guid>
-      <author></author>
-      <description>&lt;p&gt;test&lt;/p&gt;
 </description>
     </item>
   </channel>
