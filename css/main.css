@@ -109,6 +109,17 @@ h3 a {
     .header {
       background-position-x: 3.8%; } }
 
+.about, .copy {
+  padding: 2.8%;
+  color: white;
+  font-weight: 100; }
+
+.about {
+  background-color: #1293d0; }
+
+.copy {
+  background-color: #206F8F; }
+
 .icon {
   height: 35px;
   position: absolute;

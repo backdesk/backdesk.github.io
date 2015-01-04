@@ -28,6 +28,20 @@ h3 a {
 	}
 }
 
+.about, .copy {
+	padding: 2.8%;
+	color: white;
+	font-weight: 100;	
+}
+
+.about {
+	background-color: rgb(18, 147, 208);
+}
+
+.copy {
+	background-color: #206F8F;
+}
+
 .icon {
 	height: 35px;
 	position: absolute;
