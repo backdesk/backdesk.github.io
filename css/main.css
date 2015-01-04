@@ -63,6 +63,15 @@ h4 {
 article.intro header a {
   text-decoration: none; }
 
+.menu {
+  position: absolute;
+  right: 0;
+  top: 0; }
+  .menu .fa-bars {
+    color: #fff;
+    font-size: 1.3em;
+    margin: 12px; }
+
 .menu-items {
   height: 0;
   margin: 0;
@@ -102,7 +111,7 @@ h3 a {
     max-height: 100%; }
 
 .logo {
-  padding: 2.5%;
+  padding: 8px 2.5%;
   background-color: rgba(0, 0, 0, 0.6); }
   .logo h1 {
     display: block;
@@ -113,14 +122,5 @@ h3 a {
     font-weight: 300;
     font-size: 1.4em;
     letter-spacing: -1px; }
-
-.menu {
-  position: absolute;
-  right: 0;
-  top: 0; }
-  .menu .fa-bars {
-    color: #fff;
-    font-size: 1.3em;
-    margin: 12px; }
 
 /*# sourceMappingURL=main.css.map */
