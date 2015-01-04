@@ -1,3 +1,7 @@
+html {
+	-webkit-text-size-adjust: 100%;
+}
+
 body {
 	font-size: 100%;
 	font-family : san-serif;
@@ -5,8 +9,6 @@ body {
 
 body, h1, h2, h3, h4, h5, h6 {
 	font-family: 'Roboto', sans-serif;
-	-webkit-font-size-adjust: 100%;
-	font-size-adjust: 100%;
 }
 
 main {
