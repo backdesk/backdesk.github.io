@@ -105,6 +105,9 @@ h3 a {
   background-position-y: 32px;
   background-position-x: 50%;
   position: relative; }
+  @media (min-width: 43.75em) {
+    .header {
+      background-position-x: 3.8%; } }
 
 .icon {
   height: 35px;
