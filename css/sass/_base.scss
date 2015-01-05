@@ -78,3 +78,9 @@ h4 {
 	    line-height: 1.22222222em;
 	}
 }
+
+p {
+	@media (min-width: 56.25em) {
+		max-width: 38em;
+	}
+}

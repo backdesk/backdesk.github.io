@@ -7,6 +7,10 @@
 		font-size: 1.3em;
 		margin: 12px;
 	}
+
+	@media (min-width: 81.25em) {
+		display: none;
+	}
 }
 
 .menu-items {

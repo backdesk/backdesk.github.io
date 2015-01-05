@@ -18,6 +18,10 @@ h3 a {
 .wrapper {
 	width: 95%;
 	margin: 0 auto;
+
+	@media (min-width: 81.25em) {
+		width: 75%;
+	}
 }
 
 .header {
@@ -29,14 +33,22 @@ h3 a {
 	position: relative;
 
 	@media (min-width: 43.75em) {
-		background-position-x: 3.8%;
+		background-position-x: 15%;
 	}
 }
 
+.footer {
+	margin-top: 2em;
+}
+
 .about, .copy {
-	padding: 2.8%;
+	padding: 0.4em 1.2em;
 	color: white;
-	font-weight: 100;	
+	font-weight: 100;
+
+	@media (min-width: 81.25em) {
+		padding: 10px 20px;
+	}	
 }
 
 .about {
@@ -72,5 +84,9 @@ h3 a {
 		font-weight: 300;
 		font-size: 1.4em;
 		letter-spacing: -1px;
+
+		@media (min-width: 81.25em) {
+			display : none;
+		}
 	}
 }
