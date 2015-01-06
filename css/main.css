@@ -5,8 +5,11 @@ body {
   font-size: 100%;
   font-family: san-serif; }
 
-body, h1, h2, h3, h4, h5, h6 {
+body {
   font-family: 'Roboto', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Source Sans Pro', sans-serif; }
 
 main {
   font-size: 1em;
@@ -95,9 +98,29 @@ article.intro header a {
     text-decoration: none;
     font-weight: 300; }
 
+.button {
+  width: 100%;
+  font-size: 0.95em;
+  display: block;
+  -webkit-appearance: none;
+  border-radius: 5px;
+  background-color: #37c0fb;
+  border: 0;
+  margin-top: 10px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 1.5em;
+  line-height: 2.75em;
+  min-width: 9em;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  box-sizing: border-box; }
+
 body {
-  margin: 0;
-  background-color: #eaeef5; }
+  margin: 0; }
 
 a {
   color: #D35C4A; }
@@ -113,15 +136,30 @@ h3 a {
       width: 75%; } }
 
 .header {
-  height: 200px;
-  background: #A9C6CC url(http://tinyurl.com/kyghspr) no-repeat;
-  background-size: contain;
-  background-position-y: 32px;
-  background-position-x: 50%;
-  position: relative; }
-  @media (min-width: 43.75em) {
-    .header {
-      background-position-x: 3%; } }
+  position: relative;
+  height: 21em; }
+  .header .banner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #212121;
+    height: 100px;
+    padding: 20px; }
+    .header .banner h2, .header .banner h3 {
+      text-align: center;
+      color: #fff;
+      margin: 0;
+      letter-spacing: 0; }
+    .header .banner h2 {
+      font-size: 1.28em;
+      font-weight: 600; }
+    .header .banner h3 {
+      font-weight: 300; }
+    .header .banner em {
+      font-style: normal;
+      font-weight: 300;
+      opacity: 0.75; }
 
 .footer {
   margin-top: 2em; }
@@ -150,17 +188,22 @@ h3 a {
     max-height: 100%; }
 
 .logo {
-  padding: 8px 2.5%;
-  background-color: #295768; }
+  padding: 12px 2.5%;
+  background-color: #333;
+  box-shadow: 0 4px 0 0 #37c0fb;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1; }
   .logo h1 {
     display: block;
     width: 69%;
     margin: 0 auto;
     color: #fff;
     text-align: center;
-    font-weight: 300;
-    font-size: 1.4em;
-    letter-spacing: -1px; }
+    font-family: 'source sans pro' sans-serif;
+    font-weight: 600;
+    font-size: 1em; }
     @media (min-width: 43.75em) {
       .logo h1 {
         display: none; } }

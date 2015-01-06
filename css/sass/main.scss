@@ -1,10 +1,10 @@
 @import 'base';
 @import 'article';
 @import 'menu';
+@import 'button';
 
 body {
 	margin: 0;
-	background-color: rgb(234, 238, 245);
 }
 
 a {
@@ -25,15 +25,37 @@ h3 a {
 }
 
 .header {
-	height: 200px;
-	background: #A9C6CC url(http://tinyurl.com/kyghspr) no-repeat;
-	background-size: contain;
-	background-position-y: 32px;
-	background-position-x: 50%;
 	position: relative;
+	height: 21em;
 
-	@media (min-width: 43.75em) {
-		background-position-x: 3%;
+	.banner {
+		position: absolute;
+		bottom: 0; left: 0; right: 0;
+		background-color: #212121;
+		height: 100px;
+		padding: 20px;
+
+		h2, h3 {
+			text-align: center;
+			color: #fff;
+			margin: 0;
+			letter-spacing: 0;
+		}
+
+		h2 {
+			font-size: 1.28em;
+			font-weight: 600;
+		}
+
+		h3 {
+			font-weight: 300;
+		}
+
+		em {
+			font-style: normal;
+			font-weight: 300;
+			opacity: 0.75;
+		}
 	}
 }
 
@@ -72,8 +94,13 @@ h3 a {
 }
 
 .logo {
-	padding: 8px 2.5%;
-	background-color: rgb(41, 87, 104);
+	padding: 12px 2.5%;
+	background-color: #333;
+	box-shadow: 0 4px 0 0 #37c0fb;
+	position: fixed;
+	right: 0;
+	left: 0;
+	z-index: 1;
 
 	h1 {
 		display: block;
@@ -81,9 +108,9 @@ h3 a {
 		margin: 0 auto;
 		color: #fff;
 		text-align: center;
-		font-weight: 300;
-		font-size: 1.4em;
-		letter-spacing: -1px;
+		font-family: 'source sans pro' sans-serif;
+		font-weight: 600;
+		font-size: 1em;
 
 		@media (min-width: 43.75em) {
 			display : none;
