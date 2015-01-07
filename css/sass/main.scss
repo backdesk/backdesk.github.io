@@ -16,7 +16,7 @@ h3 a {
 }
 
 .wrapper {
-	width: 95%;
+	width: 90%;
 	margin: 0 auto;
 
 	@media (min-width: 81.25em) {
@@ -26,29 +26,24 @@ h3 a {
 
 .header {
 	position: relative;
-	height: 21em;
+	height: 24em;
+	text-align: center;
 
 	.banner {
 		position: absolute;
 		bottom: 0; left: 0; right: 0;
 		background-color: #212121;
-		height: 100px;
+		height: 125px;
 		padding: 20px;
 
-		h2, h3 {
+		h3 {
 			text-align: center;
 			color: #fff;
 			margin: 0;
 			letter-spacing: 0;
-		}
-
-		h2 {
-			font-size: 1.28em;
-			font-weight: 600;
-		}
-
-		h3 {
+			font-size: 1.2em;
 			font-weight: 300;
+			opacity: 0.9;
 		}
 
 		em {

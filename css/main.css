@@ -99,14 +99,13 @@ article.intro header a {
     font-weight: 300; }
 
 .button {
-  width: 100%;
   font-size: 0.95em;
   display: block;
   -webkit-appearance: none;
   border-radius: 5px;
   background-color: #37c0fb;
   border: 0;
-  margin-top: 10px;
+  margin: 20px 0;
   color: white;
   cursor: pointer;
   display: inline-block;
@@ -115,7 +114,7 @@ article.intro header a {
   min-width: 9em;
   text-align: center;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: -0.025em;
   box-sizing: border-box; }
 
@@ -129,7 +128,7 @@ h3 a {
   color: #121320; }
 
 .wrapper {
-  width: 95%;
+  width: 90%;
   margin: 0 auto; }
   @media (min-width: 81.25em) {
     .wrapper {
@@ -137,25 +136,24 @@ h3 a {
 
 .header {
   position: relative;
-  height: 21em; }
+  height: 24em;
+  text-align: center; }
   .header .banner {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: #212121;
-    height: 100px;
+    height: 125px;
     padding: 20px; }
-    .header .banner h2, .header .banner h3 {
+    .header .banner h3 {
       text-align: center;
       color: #fff;
       margin: 0;
-      letter-spacing: 0; }
-    .header .banner h2 {
-      font-size: 1.28em;
-      font-weight: 600; }
-    .header .banner h3 {
-      font-weight: 300; }
+      letter-spacing: 0;
+      font-size: 1.2em;
+      font-weight: 300;
+      opacity: 0.9; }
     .header .banner em {
       font-style: normal;
       font-weight: 300;
