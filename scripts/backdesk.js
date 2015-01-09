@@ -1,4 +1,5 @@
 $(function () {
+   	/*
 	$('#menu-btn').on('click', function () {
 		var items = $('.menu-items');
 
@@ -8,6 +9,7 @@ $(function () {
 
 		items.height((items.height() === 0) ? 'auto' : 0);
 	});
+	*/
 
 	$('a[href^="mailto:"]').on('click', function () {
 		var href = $(this).attr('href').substring(7);
