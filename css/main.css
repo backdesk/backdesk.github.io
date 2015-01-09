@@ -79,8 +79,8 @@ article.intro header a {
   z-index: 1000; }
   .menu .fa-bars {
     color: #fff;
-    font-size: 1.3em;
-    margin: 12px; }
+    font-size: 1.2em;
+    margin: 14px; }
   @media (min-width: 43.75em) {
     .menu {
       display: none; } }
