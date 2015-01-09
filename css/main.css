@@ -120,7 +120,8 @@ article.intro header a {
   box-sizing: border-box; }
 
 body {
-  margin: 0; }
+  margin: 0;
+  padding-top: 44px; }
 
 a {
   color: #D35C4A; }
@@ -146,7 +147,6 @@ main {
 .banner {
   height: 17em;
   padding: 20px;
-  margin-top: 44px;
   position: relative; }
 
 .banner header {
