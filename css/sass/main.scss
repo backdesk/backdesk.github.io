@@ -34,18 +34,19 @@ main {
 	height: 17em;
 	padding: 20px;
 	position: relative;
-	background: url(http://tinyurl.com/kyghspr);
-background-size: 62%;
+	background: url(http://i.istockimg.com/file_thumbview_approve/44517256/2/stock-photo-44517256-office-supplies.jpg);
+background-size: 119%;
 background-repeat: no-repeat;
 background-position-x: 50%;
 background-color: #A9C6CC;
+background-position-y: 70%;
 }
 
 .banner {
 	header {
 		height: 125px;
 		position: absolute; bottom: 0; left: 0; right: 0;
-		background-color: #212121;
+		background-color: rgba(33,33,33,0.9);
 		padding: 20px;
 		text-align: center;
 	}
