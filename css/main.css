@@ -20,7 +20,11 @@ main {
       line-height: 1.375em; } }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 400; }
+  font-weight: 400;
+  margin: 0.5em 0; }
+
+p {
+  margin: 0.5em 0; }
 
 h1 {
   font-size: 2em;
@@ -69,8 +73,16 @@ h4 {
   p {
     max-width: 38em; } }
 
-article.intro header a {
-  text-decoration: none; }
+article.intro {
+  margin: 2em 0; }
+  article.intro header a {
+    text-decoration: none; }
+  article.intro .meta {
+    font-size: 0.8em;
+    font-weight: 400;
+    color: #323232;
+    text-align: right;
+    display: block; }
 
 .menu {
   position: absolute;
