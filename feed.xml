@@ -19,10 +19,20 @@
 </description>
     </item>
     <item>
+      <title>Creating Github Pages with WinterSmith and Travis CI</title>
+      <link>http://localhost:7777/articles/wintersmith-github/</link>
+      <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">http://localhost:7777/articles/wintersmith-github/</guid>
+      <author></author>
+      <description>&lt;p&gt;Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.&lt;/p&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    <item>
       <title>Mobile First, Does it Work?</title>
-      <link>http://localhost:7777/articles/hack/</link>
+      <link>http://localhost:7777/articles/mobile-first/</link>
       <pubDate>Sun, 02 Feb 2014 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">http://localhost:7777/articles/hack/</guid>
+      <guid isPermaLink="true">http://localhost:7777/articles/mobile-first/</guid>
       <author></author>
       <description>&lt;p&gt;Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.&lt;/p&gt;
 &lt;hr&gt;
