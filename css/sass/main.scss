@@ -1,5 +1,6 @@
 @import 'base';
 @import 'article';
+@import 'page';
 @import 'menu';
 @import 'button';
 
@@ -106,11 +107,15 @@ main {
 		display: block;
 		width: 69%;
 		margin: 0 auto;
-		color: #fff;
 		text-align: center;
 		font-family: 'source sans pro' sans-serif;
 		font-weight: 600;
 		font-size: 1.2em;
+
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
 
 		@media (min-width: 43.75em) {
 			display : none;

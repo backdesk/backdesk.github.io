@@ -90,6 +90,9 @@ article.intro {
     text-transform: uppercase;
     margin: 1px; }
 
+.page {
+  padding-top: 20px; }
+
 .menu {
   position: absolute;
   left: 0;
@@ -223,11 +226,13 @@ main {
     display: block;
     width: 69%;
     margin: 0 auto;
-    color: #fff;
     text-align: center;
     font-family: 'source sans pro' sans-serif;
     font-weight: 600;
     font-size: 1.2em; }
+    .logo h1 a {
+      color: #fff;
+      text-decoration: none; }
     @media (min-width: 43.75em) {
       .logo h1 {
         display: none; } }
