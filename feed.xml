@@ -53,15 +53,17 @@
       <description>&lt;p&gt;I’ve often wondered if a ‘Mobile First’ approach is more of an ideal than a concrete strategy.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;As we know mobile is (most likely) the forseeable future of the web and the pace of this revolution is rapidly driving an urgency for companies to have a strategy in place. A popular trend in strategy leans towards the concept of ‘Mobile First’.&lt;/p&gt;
-&lt;p&gt;The intention of this post is to share some of the conclusions I arrived at when studying the many definitons of ‘Mobile First’. &lt;/p&gt;
+&lt;p&gt;The intention of this post is to share some of the conclusions I arrived at when studying the many definitons of ‘Mobile First’.&lt;/p&gt;
 &lt;h3 id=&quot;prototypes-vs-flat-designs&quot;&gt;Prototypes vs. Flat Designs&lt;/h3&gt;
 &lt;p&gt;We had relatively few problems to solve when I first became a web developer. Designs were handed to me in the form of a Photoshop file which I did my utmost to make pixel perfect using HTML/CSS. There wasn’t a real requirement for responsive behavior.&lt;/p&gt;
 &lt;p&gt;These days I engage a lot more with designers and at an earlier stage as well. In the past it might of been that design was a production phase where upon its completion you would receive assets to work with. That doesn’t quite cut the mustard any more.&lt;/p&gt;
 &lt;p&gt;I’ve learned that it’s important to get involved with the concept at an early stage and from there start working towards building a prototype.&lt;/p&gt;
 &lt;p&gt;I guess you could argue that the mobile aspect of the design is the simplest and for that reason - this is where we should start.&lt;/p&gt;
 &lt;h3 id=&quot;context-branching-vs-context-adaptation&quot;&gt;Context Branching vs. Context Adaptation&lt;/h3&gt;
-&lt;p&gt;I tend to think of audiences as contexts under which an application runs.  &lt;/p&gt;
+&lt;p&gt;I tend to think of audiences as contexts under which an application runs.&lt;/p&gt;
 &lt;p&gt;In my opinion a good example of this failure is Windows 8. But that’s probably a topic best left for another post!&lt;/p&gt;
+&lt;h3 id=&quot;copy&quot;&gt;Copy&lt;/h3&gt;
+&lt;p&gt;How you write and revise copy should also be a consideration in an adaptive solution. A moderately large block of copy might look great on the higher resolutions but lengthly and overkill on mobile.&lt;/p&gt;
 </description>
     </item>
   </channel>
