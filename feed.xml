@@ -52,8 +52,7 @@
       <author></author>
       <description>&lt;p&gt;I’ve often wondered if a ‘Mobile First’ approach is more of an ideal than a concrete strategy.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;As we know mobile is (most likely) the forseeable future of the web and the pace of this revolution is rapidly driving an urgency for companies to have a strategy in place. A popular trend in strategy leans towards the concept of ‘Mobile First’.&lt;/p&gt;
-&lt;p&gt;The intention of this post is to share some of the conclusions I arrived at when studying the many definitons of ‘Mobile First’.&lt;/p&gt;
+&lt;p&gt;Mobile is the future of the web and the pace of this revolution is rapidly driving an urgency for companies to have a strategy in place. A popular trend in strategy is the concept of ‘Mobile First’.&lt;/p&gt;
 &lt;h3 id=&quot;prototypes-vs-flat-designs&quot;&gt;Prototypes vs. Flat Designs&lt;/h3&gt;
 &lt;p&gt;We had relatively few problems to solve when I first became a web developer. Designs were handed to me in the form of a Photoshop file which I did my utmost to make pixel perfect using HTML/CSS. There wasn’t a real requirement for responsive behavior.&lt;/p&gt;
 &lt;p&gt;These days I engage a lot more with designers and at an earlier stage as well. In the past it might of been that design was a production phase where upon its completion you would receive assets to work with. That doesn’t quite cut the mustard any more.&lt;/p&gt;
