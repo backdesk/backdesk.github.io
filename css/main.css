@@ -66,7 +66,8 @@ h3 {
   @media (min-width: 43.75em) {
     h3 {
       font-size: 1.5em;
-      line-height: 1.25em; } }
+      line-height: 1.25em;
+      margin-top: 1em; } }
   @media (min-width: 56.25em) {
     h3 {
       font-size: 1.75em;
@@ -82,6 +83,10 @@ h4 {
 @media (min-width: 43.75em) {
   p {
     max-width: 38em; } }
+
+@media (min-width: 43.75em) {
+  article {
+    padding: 20px; } }
 
 article.intro {
   margin: 2em 0; }
@@ -166,9 +171,23 @@ h3 a {
 main {
   width: 90%;
   margin: 0 auto; }
-  @media (min-width: 81.25em) {
+  @media (min-width: 43.75em) {
     main {
-      width: 75%; } }
+      width: 62%;
+      margin-right: -100%;
+      box-sizing: border-box;
+      float: left;
+      clear: left; } }
+
+aside {
+  display: none; }
+  @media (min-width: 43.75em) {
+    aside {
+      border: 1px solid red;
+      height: 1000px;
+      width: 38%;
+      float: right;
+      display: block; } }
 
 .header {
   position: fixed;
@@ -182,6 +201,9 @@ main {
   height: 17em;
   padding: 20px;
   position: relative; }
+  @media (min-width: 43.75em) {
+    .banner {
+      display: none; } }
 
 .banner header {
   height: 125px;
@@ -204,6 +226,14 @@ main {
   font-style: normal;
   font-weight: 300;
   opacity: 0.75; }
+
+.wrapper {
+  overflow: hidden;
+  max-width: 900px; }
+  @media (min-width: 43.75em) {
+    .wrapper {
+      width: 85%;
+      margin: 0 auto; } }
 
 .footer {
   margin-top: 2em; }
@@ -235,6 +265,9 @@ main {
   padding: 12px 2.5%;
   background-color: #333;
   box-shadow: 0 4px 0 0 #37c0fb; }
+  @media (min-width: 43.75em) {
+    .logo {
+      height: 60px; } }
   .logo h1 {
     display: block;
     width: 69%;
