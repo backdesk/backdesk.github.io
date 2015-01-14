@@ -244,7 +244,14 @@ aside {
   font-weight: 100; }
   @media (min-width: 43.75em) {
     .about, .copy {
-      padding: 10px 20px; } }
+      padding: 10px 20px;
+      text-align: center; }
+      .about small, .copy small {
+        max-width: 660px;
+        font-weight: 300;
+        opacity: 0.8;
+        margin: 0 auto;
+        display: block; } }
 
 .about {
   background-color: #1293d0; }

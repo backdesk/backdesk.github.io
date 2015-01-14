@@ -105,6 +105,15 @@ aside {
 
 	@media (min-width: 43.75em) {
 		padding: 10px 20px;
+		text-align: center;
+
+		small {
+			max-width: 660px;
+			font-weight: 300;
+			opacity: 0.8;
+			margin : 0 auto;
+			display: block;
+		}
 	}
 }
 
