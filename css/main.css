@@ -121,6 +121,17 @@ article.intro .tags a {
 .article-detail {
   padding-top: 64px; }
 
+aside {
+  display: none; }
+  @media (min-width: 43.75em) {
+    aside {
+      width: 38%;
+      float: right;
+      display: block; } }
+  aside .side {
+    height: 600px;
+    margin: 3em 0 0 3em; }
+
 .page {
   padding-top: 20px; }
 
@@ -195,15 +206,6 @@ main {
       float: left;
       clear: left; } }
 
-aside {
-  display: none; }
-  @media (min-width: 43.75em) {
-    aside {
-      height: 1000px;
-      width: 38%;
-      float: right;
-      display: block; } }
-
 .header {
   position: fixed;
   top: 0;
@@ -277,6 +279,15 @@ aside {
 
 .about {
   background-color: #1293d0; }
+
+.about-me {
+  text-align: center;
+  border: 1px solid #bcbcbc;
+  box-sizing: border-box;
+  padding: 1.2em;
+  border-radius: 5px; }
+  .about-me h3 {
+    font-size: 1.25em; }
 
 .copy {
   background-color: #206F8F; }

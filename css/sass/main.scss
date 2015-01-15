@@ -1,5 +1,6 @@
 @import 'base';
 @import 'article';
+@import 'sidebar';
 @import 'page';
 @import 'menu';
 @import 'button';
@@ -31,17 +32,6 @@ main {
 		box-sizing: border-box;
 		float: left;
 		clear: left;
-	}
-}
-
-aside {
-	display: none;
-
-	@media (min-width: 43.75em) {
-		height: 1000px;
-		width: 38%;
-		float: right;
-		display: block;
 	}
 }
 
@@ -132,6 +122,18 @@ aside {
 
 .about {
 	background-color: rgb(18, 147, 208);
+}
+
+.about-me {
+	text-align: center;
+	border: 1px solid rgb(188, 188, 188);
+	box-sizing: border-box;
+	padding: 1.2em;
+	border-radius: 5px;
+
+	h3 {
+		font-size: 1.25em;
+	}
 }
 
 .copy {
