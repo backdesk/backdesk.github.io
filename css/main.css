@@ -247,16 +247,23 @@ aside {
       margin: 0 auto; } }
 
 .footer {
-  margin-top: 2em; }
+  margin-top: 2em;
+  border-top: 2px solid #206f8f; }
+  .footer .social {
+    font-size: 1.2em;
+    display: block;
+    text-align: center; }
+    .footer .social i {
+      margin: 0.5em; }
 
 .about, .copy {
   padding: 0.4em 1.2em;
   color: white;
-  font-weight: 100; }
+  font-weight: 100;
+  text-align: center; }
   @media (min-width: 43.75em) {
     .about, .copy {
-      padding: 10px 20px;
-      text-align: center; }
+      padding: 10px 20px; }
       .about small, .copy small {
         max-width: 660px;
         font-weight: 300;

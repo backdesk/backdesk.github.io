@@ -98,17 +98,28 @@ aside {
 
 .footer {
 	margin-top: 2em;
+	border-top: 2px solid rgb(32, 111, 143);
+
+	.social {
+		font-size: 1.2em;
+		display: block;
+		text-align: center;
+
+		i {
+			margin: 0.5em;
+		}
+	}
 }
 
 .about, .copy {
 	padding: 0.4em 1.2em;
 	color: white;
 	font-weight: 100;
+	text-align: center;
+
 
 	@media (min-width: 43.75em) {
 		padding: 10px 20px;
-		text-align: center;
-
 		small {
 			max-width: 660px;
 			font-weight: 300;
