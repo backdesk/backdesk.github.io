@@ -7,6 +7,10 @@
 body {
 	margin: 0;
 	padding-top: 44px;
+
+	@media (min-width: 43.75em) {
+		padding-top: 84px;
+	}
 }
 
 a {
@@ -33,9 +37,7 @@ main {
 aside {
 	display: none;
 
-
 	@media (min-width: 43.75em) {
-		border: 1px solid red;
 		height: 1000px;
 		width: 38%;
 		float: right;
@@ -52,7 +54,7 @@ aside {
 	height: 17em;
 	padding: 20px;
 	position: relative;
-	
+
 	@media (min-width: 43.75em) {
 		display: none;
 	}

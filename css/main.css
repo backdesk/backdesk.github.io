@@ -84,26 +84,30 @@ h4 {
   p {
     max-width: 38em; } }
 
-@media (min-width: 43.75em) {
-  article {
-    padding: 20px; } }
+article {
+  padding-top: 1.25em; }
+  @media (min-width: 43.75em) {
+    article {
+      padding: 1em 0;
+      border-bottom: 1px solid #ddd; } }
+  @media (min-width: 43.75em) {
+    article h2 {
+      margin-top: 1em; } }
 
-article.intro {
-  margin: 2em 0; }
-  article.intro header a {
-    text-decoration: none; }
-  article.intro .meta {
-    font-size: 0.9em;
-    font-weight: 400;
-    color: #323232;
-    text-align: right;
-    display: block; }
-  article.intro .tags a {
-    color: #000;
-    text-decoration: none;
-    font-size: 0.85em;
-    text-transform: uppercase;
-    margin: 1px; }
+article.intro header a {
+  text-decoration: none; }
+article.intro .meta {
+  font-size: 0.9em;
+  font-weight: 400;
+  color: #323232;
+  text-align: right;
+  display: block; }
+article.intro .tags a {
+  color: #000;
+  text-decoration: none;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  margin: 1px; }
 
 .article-detail {
   padding-top: 64px; }
@@ -161,6 +165,9 @@ article.intro {
 body {
   margin: 0;
   padding-top: 44px; }
+  @media (min-width: 43.75em) {
+    body {
+      padding-top: 84px; } }
 
 a {
   color: #D35C4A; }
@@ -183,7 +190,6 @@ aside {
   display: none; }
   @media (min-width: 43.75em) {
     aside {
-      border: 1px solid red;
       height: 1000px;
       width: 38%;
       float: right;

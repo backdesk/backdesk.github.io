@@ -1,12 +1,22 @@
 article {
+	padding-top: 1.25em;
+
 	@media (min-width: 43.75em) {
-		padding: 20px;
+		padding: 1em 0;
+		border-bottom: 1px solid #ddd;
+	}
+
+	h2 {
+		@media (min-width: 43.75em) {
+			margin-top: 1em;
+		}
 	}
 }
 
 article.intro {
 	header a {
 		text-decoration: none;
+
 	}
 
 	.meta {
@@ -26,8 +36,6 @@ article.intro {
 			margin: 1px;
 		}
 	}
-
-	margin: 2em 0;
 }
 
 .article-detail {
