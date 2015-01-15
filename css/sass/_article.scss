@@ -13,6 +13,14 @@ article {
 	}
 }
 
+.article-detail {
+	section > p:first-child {
+		border-bottom: 1px solid #ddd;
+		padding-bottom: 2em;
+		margin-bottom: 2em;
+	}
+}
+
 article.intro {
 	header a {
 		text-decoration: none;

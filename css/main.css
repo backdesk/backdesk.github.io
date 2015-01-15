@@ -94,6 +94,11 @@ article {
     article h2 {
       margin-top: 1em; } }
 
+.article-detail section > p:first-child {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 2em;
+  margin-bottom: 2em; }
+
 article.intro header a {
   text-decoration: none; }
 article.intro .meta {
