@@ -108,11 +108,15 @@ article.intro .meta {
   text-align: right;
   display: block; }
 article.intro .tags a {
-  color: #000;
   text-decoration: none;
-  font-size: 0.85em;
   text-transform: uppercase;
-  margin: 1px; }
+  margin: 1px;
+  background-color: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 0.65em;
+  letter-spacing: 1px; }
 
 .article-detail {
   padding-top: 64px; }
