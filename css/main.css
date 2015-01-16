@@ -120,9 +120,6 @@ article.intro .tags a {
   font-size: 0.65em;
   letter-spacing: 1px; }
 
-.article-detail {
-  padding-top: 64px; }
-
 aside {
   display: none; }
   @media (min-width: 43.75em) {
