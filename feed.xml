@@ -40,6 +40,21 @@
 </description>
     </item>
     <item>
+      <title>Backbone Architecture</title>
+      <link>http://localhost:7777/articles/backbone-arch-part1/</link>
+      <pubDate>Tue, 14 Oct 2014 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">http://localhost:7777/articles/backbone-arch-part1/</guid>
+      <author></author>
+      <description>&lt;p&gt;Praesent quis felis at nulla venenatis tincidunt. Phasellus elementum ac magna a placerat. Proin hendrerit neque dapibus aliquam pharetra. Nunc sed libero vitae arcu pulvinar luctus a vitae risus. Sed viverra bibendum libero eget fermentum.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;phasellus-dictum-lectus-non-pharetra-pellentesqu&quot;&gt;Phasellus Dictum, Lectus non Pharetra Pellentesqu&lt;/h3&gt;
+&lt;p&gt;Phasellus dictum, lectus non pharetra pellentesque, libero ligula viverra sapien, et volutpat ante lectus ac nunc. Duis varius convallis risus, eget scelerisque justo hendrerit et. Phasellus rhoncus, neque ac congue lobortis, massa neque sodales sem, vel congue enim purus et purus. Proin eget neque rhoncus, feugiat erat eu, aliquam nunc. Vivamus quis ante et ex imperdiet convallis. Cras pellentesque eros est, nec imperdiet urna elementum quis. Integer blandit elit at nibh ornare, eu tincidunt lorem volutpat. Proin vel arcu lectus. Etiam vitae viverra orci. In ac sem iaculis, blandit lorem at, rutrum neque. Integer ac mi eget mi bibendum convallis.&lt;/p&gt;
+&lt;p&gt;Cras ut sagittis augue. Integer id semper orci. Praesent at dignissim tellus. Nunc non quam pretium, dictum metus quis, gravida sapien. In iaculis ornare varius. Aenean et nulla bibendum quam sodales venenatis in at neque. Fusce non leo quis tortor suscipit fringilla in non tellus. Fusce non enim ipsum. Phasellus id sapien id libero ultricies suscipit tempor et lectus. Proin ac sagittis nibh. Donec suscipit eu dui a faucibus.&lt;/p&gt;
+&lt;h3 id=&quot;sed-cursus-consequat-dapibus&quot;&gt;Sed Cursus Consequat Dapibus&lt;/h3&gt;
+&lt;p&gt;In vulputate lobortis accumsan. Aenean tincidunt vestibulum purus. In vulputate nec diam a pellentesque. Duis luctus ultrices velit id rutrum. Nam pharetra gravida ex, ullamcorper feugiat arcu tristique ac. Phasellus eget ligula nisi. Duis viverra metus eu tortor accumsan, at pulvinar tellus egestas. Donec ut lacus dolor.&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>Mobile First, Does it Work?</title>
       <link>http://localhost:7777/articles/mobile-first/</link>
       <pubDate>Fri, 10 Jan 2014 00:00:00 +0000</pubDate>

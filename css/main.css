@@ -98,6 +98,8 @@ article {
   border-bottom: 1px solid #ddd;
   padding-bottom: 2em;
   margin-bottom: 2em; }
+.article-detail article {
+  border-bottom: 1px solid #ddd; }
 
 article.intro header a {
   text-decoration: none; }
@@ -261,6 +263,10 @@ main {
     text-align: center; }
     .footer .social i {
       margin: 0.5em; }
+
+footer.author {
+  padding: 0.8em 0 1.6em;
+  border-bottom: 1px solid #ddd; }
 
 .about, .copy {
   padding: 0.4em 1.2em;
