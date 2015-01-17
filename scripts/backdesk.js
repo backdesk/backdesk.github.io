@@ -18,4 +18,6 @@ $(function () {
 			ga('send', 'event', { eventCategory: 'Contact', eventAction: 'Email', eventLabel: 'Contact Link'});
 		}
 	});
+
+	hljs.initHighlightingOnLoad();
 });

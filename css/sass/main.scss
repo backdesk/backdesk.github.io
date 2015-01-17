@@ -3,6 +3,7 @@
 @import 'sidebar';
 @import 'page';
 @import 'menu';
+@import 'code';
 @import 'button';
 
 body {
@@ -114,7 +115,7 @@ footer.author {
 
 
 	@media (min-width: 43.75em) {
-		padding: 10px 20px;
+		padding: 10px 20px 20px;
 		small {
 			max-width: 660px;
 			font-weight: 300;

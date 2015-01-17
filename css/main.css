@@ -161,6 +161,21 @@ aside {
     text-decoration: none;
     font-weight: 300; }
 
+code {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 0.85em;
+  color: #000; }
+
+pre code {
+  display: block;
+  line-height: 1.1; }
+
+code {
+  padding: 1em;
+  border-radius: 0.3em;
+  position: relative;
+  background: #eee; }
+
 .button {
   font-size: 0.95em;
   display: block;
@@ -272,7 +287,7 @@ footer.author {
   text-align: center; }
   @media (min-width: 43.75em) {
     .about, .copy {
-      padding: 10px 20px; }
+      padding: 10px 20px 20px; }
       .about small, .copy small {
         max-width: 660px;
         font-weight: 300;

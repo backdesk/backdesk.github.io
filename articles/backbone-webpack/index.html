@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Using Backbone with Webpack - Backdesk
+    </title>
+    <link rel="alternate" href="http://localhost:7777/feed.xml" type="application/rss+xml" title="Digital content done right">
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600|Lato:400,700,900|Roboto:400,300,100,700,500" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="menu"><a href="#menu"><i class="fa fa-bars"></i></a></div>
+      <div class="logo">
+        <h1><a href="/">Backdesk</a></h1>
+      </div>
+    </header>
+    <div class="wrapper">
+      <aside>
+        <div class="side">
+          <div class="about-me">
+            <h3>I am a web veteran based in the South West of England, specializing in full stack JavaScript applications.</h3><a href="about-me.html" class="button">More About Me</a>
+          </div>
+        </div>
+      </aside>
+      <main>
+        <article class="article">
+          <header>
+            <h2>Using Backbone with Webpack</h2>
+          </header>
+          <section class="content"><p>This is a very short guide demonstrating how to structure an application using Backbone and&nbsp;Webpack. </p>
+<hr>
+<h3 id="getting-started">Getting&nbsp;started</h3>
+<p>You can skip this part if you’re already familiar with installing packages using <span class="caps">NPM</span> and alternatively if you just want the package.json file you can find it&nbsp;here.</p>
+<p>The first thing I’m going to do is create a package.json file. Create a new folder called ‘boilerplate’ and open it within a&nbsp;terminal.</p>
+<p>Type the following command (you can accept the default&nbsp;options):</p>
+<pre><code>npm init
+</code></pre><p>Next we’ll start bringing in the dependencies we need for our&nbsp;stack</p>
+<pre><code>npm install --save-dev jquery underscore backbone webpack grunt
+</code></pre><h3 id="project-structure">Project&nbsp;Structure</h3>
+<pre><code>app.js - main entry point
+</code></pre><h3 id="setting-up-webpack">Setting up&nbsp;Webpack</h3>
+<p>As mentioned I will be using Webpack to bundle the JavaScript assets for the client application. The bundled assets (main.min.js) will eventually be served from a local webserver. Webpack can package up other assets like templates and stylesheets as&nbsp;well.</p>
+<pre><code>webpack.config.js
+
+module.exports = {
+    entry: &#39;./main.js&#39;,
+
+    output: {
+        path: __dirname + &#39;/dist&#39;,
+        filename: &#39;main.min.js&#39;
+    },
+
+    plugins: [
+        new webpack.ProvidePlugin({
+            $ : &#39;jquery&#39;,
+            Backbone : &#39;backbone&#39;
+        })
+    ]
+};
+</code></pre><p>Discuss: Alternatively bring the various dependencies like underscore and backbone in through a&nbsp;<span class="caps">CDN</span>. </p>
+<h3 id="getting-to-work">Getting to&nbsp;Work</h3>
+<p>Let’s start with a basic view and template that we’ll use later&nbsp;on.</p>
+<pre><code>welcome.view.js
+
+var View = Backbone.View.extend({
+    template : require(&#39;../templates/welcome.html&#39;),
+
+    render : function () {
+        this.$el.html(this.template());
+
+        return this;
+    } 
+});
+
+module.exports = View;
+</code></pre><h3 id="templates">Templates</h3>
+<p>In the above example I require’d a template into my view. There are a number of different template engines I could use but I’ve chosen to stick with underscore for this example. By default webpack will assume your require’d resource to be JavaScript unless told otherwise. This is where loaders come in. We need something to tell webpack that our html resources should be treated as underscore&nbsp;templates.</p>
+<p>We can build in support for underscore templates by installing a specialized&nbsp;loader:</p>
+<pre><code>npm install --save-dev underscore-template-loader
+</code></pre><p>And then adding the following to the webpack.config.js&nbsp;file:</p>
+<pre><code>module: {
+    loaders: [
+        { test: /\.html$/, loader: &#39;underscore-template-loader&#39; }
+    ]
+},
+</code></pre><p>For this example my uber-simple template comprises of a single&nbsp;H1:</p>
+<pre><code>&lt;h1&gt;Welcome!&lt;/h1&gt;
+</code></pre><h3 id="bootstrapping">Bootstrapping</h3>
+<p>If you cast your eye back to the webpack.config.js file you will see the ‘entry’ property, used to point Webpack at an applications entry point. I’ve set app.js to be the main entry point and I’m going to set up a quick and dirty Backbone.Router within there. The router only has one default route which cranks up the view we just&nbsp;created.</p>
+<pre><code>var WelcomeView = require(&#39;./scripts/welcome.view.js&#39;), 
+    Router;
+
+Router = Backbone.Router.extend({
+
+  routes: {
+    &#39;&#39; : &#39;home&#39;
+  },
+
+  home : function() {
+    var view = new WelcomeView();
+
+    $(&#39;main&#39;).append(view.render().el);
+  }
+});
+
+$(function () {
+  new Router();
+
+  Backbone.history.start();
+});
+</code></pre><h3 id="stylesheets">Stylesheets</h3>
+<h3 id="production">Production</h3>
+<pre><code>webpack -p (uglify kicks in by default)
+</code></pre><h3 id="further-reading-and-useful-links">Further Reading and Useful&nbsp;Links</h3>
+<ul>
+<li><a href="http://web-design-weekly.com/2014/09/24/diving-webpack/">http://web-design-weekly.com/2014/09/24/diving-webpack/</a></li>
+<li><a href="http://stackoverflow.com/questions/23305599/webpack-provideplugin-vs-externals">http://stackoverflow.com/questions/23305599/webpack-provideplugin-vs-externals</a></li>
+<li><a href="http://stackoverflow.com/questions/24311282/grunt-webpack-globals-via-provideplugin">http://stackoverflow.com/questions/24311282/grunt-webpack-globals-via-provideplugin</a></li>
+<li><a href="http://cuttleblog.tumblr.com/post/63669845272/webpack">http://cuttleblog.tumblr.com/post/63669845272/webpack</a></li>
+</ul>
+</section>
+        </article>
+        <footer class="author">
+          <h4>About the author</h4><small class="author">James Gardner is a front-end specialist at Backdesk Solutions in Bath, UK. He's passionate about all things web with a special place in his heart set aside for JavaScript.</small>
+        </footer>
+      </main>
+    </div>
+    <footer class="footer">
+      <section class="about"><span class="social"><i class="fa fa-facebook"></i><i class="fa fa-twitter"></i><i class="fa fa-github"></i><i class="fa fa-linkedin"></i></span><small>
+          Backdesk Solutions is a limited company registered in England and Wales. 
+          Company registration No. 09224652. VAT registration No. 200147179.</small></section>
+      <section class="copy"><small>&copy; 2015 Backdesk Solutions Ltd</small></section>
+    </footer>
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="/scripts/backdesk.js"></script>
+    <script src="/scripts/tracking.js"></script>
+  </body>
+</html>
