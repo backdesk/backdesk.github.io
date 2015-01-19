@@ -46,7 +46,7 @@
 <p>As mentioned I will be using Webpack to bundle the JavaScript assets for the client application. The bundled assets (main.min.js) will eventually be served from a local webserver. Webpack can package up other assets like templates and stylesheets as&nbsp;well.</p>
 <script src="https://gist.github.com/james-gardner/4b13090baccb3649d65e.js"></script>
 
-<p>Discuss: Alternatively bring the various dependencies like underscore and backbone in through a&nbsp;<span class="caps">CDN</span>. </p>
+<p>We could bring the various dependencies like underscore and backbone in through a <span class="caps">CDN</span>. In this example I will keep everything&nbsp;inclusive.</p>
 <h3 id="getting-to-work">Getting to&nbsp;Work</h3>
 <p>Let’s start with a basic view and template that we’ll use later&nbsp;on.</p>
 <script src="https://gist.github.com/james-gardner/34a6512a2d944a5abcf9.js"></script>
@@ -61,24 +61,23 @@
         { test: /\.html$/, loader: &#39;underscore-template-loader&#39; }
     ]
 },
-</code></pre><p>For this example my uber-simple template comprises of a single&nbsp;H1:</p>
+</code></pre><p>For this example my uber-simple template comprises of a single H1 and&nbsp;paragraph:</p>
 <script src="https://gist.github.com/james-gardner/b1cd73c23285b95b759c.js"></script>
 
 <h3 id="bootstrapping">Bootstrapping</h3>
-<p>If you cast your eye back to the webpack.config.js file you will see the ‘entry’ property, used to point Webpack at an applications entry point. I’ve set app.js to be the main entry point and I’m going to set up a quick and dirty Backbone.Router within there. The router only has one default route which cranks up the view we just&nbsp;created.</p>
+<p>If you cast your eye back to the webpack.config.js file you will see the ‘entry’ property which is used to point Webpack at an applications entry point. I’ve set app.js to be the main entry point and I’m going to set up a quick and dirty Backbone.Router within there. The router only has one default route which cranks up the view we just&nbsp;created.</p>
 <script src="https://gist.github.com/james-gardner/b55306e31d0dc70d49f2.js"></script>
 
 <h3 id="stylesheets">Stylesheets</h3>
 <h3 id="production">Production</h3>
 <pre><code>$ webpack -p (uglify kicks in by default)
 </code></pre><h3 id="further-reading-and-useful-links">Further Reading and Useful&nbsp;Links</h3>
-<ul>
-<li><a href="http://web-design-weekly.com/2014/09/24/diving-webpack/">http://web-design-weekly.com/2014/09/24/diving-webpack/</a></li>
-<li><a href="http://stackoverflow.com/questions/23305599/webpack-provideplugin-vs-externals">http://stackoverflow.com/questions/23305599/webpack-provideplugin-vs-externals</a></li>
-<li><a href="http://stackoverflow.com/questions/24311282/grunt-webpack-globals-via-provideplugin">http://stackoverflow.com/questions/24311282/grunt-webpack-globals-via-provideplugin</a></li>
-<li><a href="http://cuttleblog.tumblr.com/post/63669845272/webpack">http://cuttleblog.tumblr.com/post/63669845272/webpack</a></li>
-</ul>
-</section>
+<!--
+* http://web-design-weekly.com/2014/09/24/diving-webpack/
+* http://stackoverflow.com/questions/23305599/webpack-provideplugin-vs-externals
+* http://stackoverflow.com/questions/24311282/grunt-webpack-globals-via-provideplugin
+* http://cuttleblog.tumblr.com/post/63669845272/webpack
+--></section>
         </article>
         <footer class="author">
           <h4>About the author</h4><small class="author">James Gardner is a front-end specialist at Backdesk Solutions in Bath, UK. He's passionate about all things web with a special place in his heart for JavaScript.</small>

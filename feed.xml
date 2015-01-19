@@ -9,6 +9,21 @@
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
     <item>
+      <title>A Guide to Contracting</title>
+      <link>http://localhost:7777/articles/contractors-guide/</link>
+      <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">http://localhost:7777/articles/contractors-guide/</guid>
+      <author></author>
+      <description>&lt;p&gt;Praesent quis felis at nulla venenatis tincidunt. Phasellus elementum ac magna a placerat. Proin hendrerit neque dapibus aliquam pharetra. Nunc sed libero vitae arcu pulvinar luctus a vitae risus. Sed viverra bibendum libero eget fermentum.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;phasellus-dictum-lectus-non-pharetra-pellentesqu&quot;&gt;Phasellus Dictum, Lectus non Pharetra Pellentesqu&lt;/h3&gt;
+&lt;p&gt;Phasellus dictum, lectus non pharetra pellentesque, libero ligula viverra sapien, et volutpat ante lectus ac nunc. Duis varius convallis risus, eget scelerisque justo hendrerit et. Phasellus rhoncus, neque ac congue lobortis, massa neque sodales sem, vel congue enim purus et purus. Proin eget neque rhoncus, feugiat erat eu, aliquam nunc. Vivamus quis ante et ex imperdiet convallis. Cras pellentesque eros est, nec imperdiet urna elementum quis. Integer blandit elit at nibh ornare, eu tincidunt lorem volutpat. Proin vel arcu lectus. Etiam vitae viverra orci. In ac sem iaculis, blandit lorem at, rutrum neque. Integer ac mi eget mi bibendum convallis.&lt;/p&gt;
+&lt;p&gt;Cras ut sagittis augue. Integer id semper orci. Praesent at dignissim tellus. Nunc non quam pretium, dictum metus quis, gravida sapien. In iaculis ornare varius. Aenean et nulla bibendum quam sodales venenatis in at neque. Fusce non leo quis tortor suscipit fringilla in non tellus. Fusce non enim ipsum. Phasellus id sapien id libero ultricies suscipit tempor et lectus. Proin ac sagittis nibh. Donec suscipit eu dui a faucibus.&lt;/p&gt;
+&lt;h3 id=&quot;sed-cursus-consequat-dapibus&quot;&gt;Sed Cursus Consequat Dapibus&lt;/h3&gt;
+&lt;p&gt;In vulputate lobortis accumsan. Aenean tincidunt vestibulum purus. In vulputate nec diam a pellentesque. Duis luctus ultrices velit id rutrum. Nam pharetra gravida ex, ullamcorper feugiat arcu tristique ac. Phasellus eget ligula nisi. Duis viverra metus eu tortor accumsan, at pulvinar tellus egestas. Donec ut lacus dolor.&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>Using Backbone with Webpack</title>
       <link>http://localhost:7777/articles/backbone-webpack/</link>
       <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
@@ -29,7 +44,7 @@
 &lt;p&gt;As mentioned I will be using Webpack to bundle the JavaScript assets for the client application. The bundled assets (main.min.js) will eventually be served from a local webserver. Webpack can package up other assets like templates and stylesheets as well.&lt;/p&gt;
 &lt;script src=&quot;https://gist.github.com/james-gardner/4b13090baccb3649d65e.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;Discuss: Alternatively bring the various dependencies like underscore and backbone in through a CDN. &lt;/p&gt;
+&lt;p&gt;We could bring the various dependencies like underscore and backbone in through a CDN. In this example I will keep everything inclusive.&lt;/p&gt;
 &lt;h3 id=&quot;getting-to-work&quot;&gt;Getting to Work&lt;/h3&gt;
 &lt;p&gt;Let’s start with a basic view and template that we’ll use later on.&lt;/p&gt;
 &lt;script src=&quot;https://gist.github.com/james-gardner/34a6512a2d944a5abcf9.js&quot;&gt;&lt;/script&gt;
@@ -44,39 +59,23 @@
         { test: /\.html$/, loader: &amp;#39;underscore-template-loader&amp;#39; }
     ]
 },
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;For this example my uber-simple template comprises of a single H1:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;For this example my uber-simple template comprises of a single H1 and paragraph:&lt;/p&gt;
 &lt;script src=&quot;https://gist.github.com/james-gardner/b1cd73c23285b95b759c.js&quot;&gt;&lt;/script&gt;
 
 &lt;h3 id=&quot;bootstrapping&quot;&gt;Bootstrapping&lt;/h3&gt;
-&lt;p&gt;If you cast your eye back to the webpack.config.js file you will see the ‘entry’ property, used to point Webpack at an applications entry point. I’ve set app.js to be the main entry point and I’m going to set up a quick and dirty Backbone.Router within there. The router only has one default route which cranks up the view we just created.&lt;/p&gt;
+&lt;p&gt;If you cast your eye back to the webpack.config.js file you will see the ‘entry’ property which is used to point Webpack at an applications entry point. I’ve set app.js to be the main entry point and I’m going to set up a quick and dirty Backbone.Router within there. The router only has one default route which cranks up the view we just created.&lt;/p&gt;
 &lt;script src=&quot;https://gist.github.com/james-gardner/b55306e31d0dc70d49f2.js&quot;&gt;&lt;/script&gt;
 
 &lt;h3 id=&quot;stylesheets&quot;&gt;Stylesheets&lt;/h3&gt;
 &lt;h3 id=&quot;production&quot;&gt;Production&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;$ webpack -p (uglify kicks in by default)
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;further-reading-and-useful-links&quot;&gt;Further Reading and Useful Links&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://web-design-weekly.com/2014/09/24/diving-webpack/&quot;&gt;http://web-design-weekly.com/2014/09/24/diving-webpack/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/23305599/webpack-provideplugin-vs-externals&quot;&gt;http://stackoverflow.com/questions/23305599/webpack-provideplugin-vs-externals&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/24311282/grunt-webpack-globals-via-provideplugin&quot;&gt;http://stackoverflow.com/questions/24311282/grunt-webpack-globals-via-provideplugin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://cuttleblog.tumblr.com/post/63669845272/webpack&quot;&gt;http://cuttleblog.tumblr.com/post/63669845272/webpack&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    <item>
-      <title>A Guide to Contracting</title>
-      <link>http://localhost:7777/articles/contractors-guide/</link>
-      <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">http://localhost:7777/articles/contractors-guide/</guid>
-      <author></author>
-      <description>&lt;p&gt;Praesent quis felis at nulla venenatis tincidunt. Phasellus elementum ac magna a placerat. Proin hendrerit neque dapibus aliquam pharetra. Nunc sed libero vitae arcu pulvinar luctus a vitae risus. Sed viverra bibendum libero eget fermentum.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;phasellus-dictum-lectus-non-pharetra-pellentesqu&quot;&gt;Phasellus Dictum, Lectus non Pharetra Pellentesqu&lt;/h3&gt;
-&lt;p&gt;Phasellus dictum, lectus non pharetra pellentesque, libero ligula viverra sapien, et volutpat ante lectus ac nunc. Duis varius convallis risus, eget scelerisque justo hendrerit et. Phasellus rhoncus, neque ac congue lobortis, massa neque sodales sem, vel congue enim purus et purus. Proin eget neque rhoncus, feugiat erat eu, aliquam nunc. Vivamus quis ante et ex imperdiet convallis. Cras pellentesque eros est, nec imperdiet urna elementum quis. Integer blandit elit at nibh ornare, eu tincidunt lorem volutpat. Proin vel arcu lectus. Etiam vitae viverra orci. In ac sem iaculis, blandit lorem at, rutrum neque. Integer ac mi eget mi bibendum convallis.&lt;/p&gt;
-&lt;p&gt;Cras ut sagittis augue. Integer id semper orci. Praesent at dignissim tellus. Nunc non quam pretium, dictum metus quis, gravida sapien. In iaculis ornare varius. Aenean et nulla bibendum quam sodales venenatis in at neque. Fusce non leo quis tortor suscipit fringilla in non tellus. Fusce non enim ipsum. Phasellus id sapien id libero ultricies suscipit tempor et lectus. Proin ac sagittis nibh. Donec suscipit eu dui a faucibus.&lt;/p&gt;
-&lt;h3 id=&quot;sed-cursus-consequat-dapibus&quot;&gt;Sed Cursus Consequat Dapibus&lt;/h3&gt;
-&lt;p&gt;In vulputate lobortis accumsan. Aenean tincidunt vestibulum purus. In vulputate nec diam a pellentesque. Duis luctus ultrices velit id rutrum. Nam pharetra gravida ex, ullamcorper feugiat arcu tristique ac. Phasellus eget ligula nisi. Duis viverra metus eu tortor accumsan, at pulvinar tellus egestas. Donec ut lacus dolor.&lt;/p&gt;
-</description>
+&lt;!--
+* http://web-design-weekly.com/2014/09/24/diving-webpack/
+* http://stackoverflow.com/questions/23305599/webpack-provideplugin-vs-externals
+* http://stackoverflow.com/questions/24311282/grunt-webpack-globals-via-provideplugin
+* http://cuttleblog.tumblr.com/post/63669845272/webpack
+--&gt;</description>
     </item>
     <item>
       <title>Driving Github Pages with WinterSmith and Travis CI</title>
