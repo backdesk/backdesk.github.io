@@ -45,8 +45,9 @@
     ]
 },
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;For this example my uber-simple template comprises of a single H1:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;h1&amp;gt;Welcome!&amp;lt;/h1&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;bootstrapping&quot;&gt;Bootstrapping&lt;/h3&gt;
+&lt;script src=&quot;https://gist.github.com/james-gardner/b1cd73c23285b95b759c.js&quot;&gt;&lt;/script&gt;
+
+&lt;h3 id=&quot;bootstrapping&quot;&gt;Bootstrapping&lt;/h3&gt;
 &lt;p&gt;If you cast your eye back to the webpack.config.js file you will see the ‘entry’ property, used to point Webpack at an applications entry point. I’ve set app.js to be the main entry point and I’m going to set up a quick and dirty Backbone.Router within there. The router only has one default route which cranks up the view we just created.&lt;/p&gt;
 &lt;script src=&quot;https://gist.github.com/james-gardner/b55306e31d0dc70d49f2.js&quot;&gt;&lt;/script&gt;
 
