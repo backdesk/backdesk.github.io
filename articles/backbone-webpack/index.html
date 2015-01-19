@@ -34,53 +34,27 @@
           <section class="content"><p>This is a very short guide demonstrating how to structure an application using Backbone and&nbsp;Webpack. </p>
 <hr>
 <h3 id="getting-started">Getting&nbsp;started</h3>
-<p>You can skip this part if you’re already familiar with installing packages using <span class="caps">NPM</span> and alternatively if you just want the package.json file you can find it&nbsp;here.</p>
+<p>You can skip this part if you’re already familiar with installing packages using <span class="caps">NPM</span> and alternatively if you just want the package.json file you can find it <a href="https://gist.github.com/james-gardner/e78d64453f30fc27ff49">here</a>.</p>
 <p>The first thing I’m going to do is create a package.json file. Create a new folder called ‘boilerplate’ and open it within a&nbsp;terminal.</p>
 <p>Type the following command (you can accept the default&nbsp;options):</p>
-<pre><code>npm init
+<pre><code>$ npm init
 </code></pre><p>Next we’ll start bringing in the dependencies we need for our&nbsp;stack</p>
-<pre><code>npm install --save-dev jquery underscore backbone webpack grunt
+<pre><code>$ npm install --save-dev jquery underscore backbone webpack grunt
 </code></pre><h3 id="project-structure">Project&nbsp;Structure</h3>
 <pre><code>app.js - main entry point
 </code></pre><h3 id="setting-up-webpack">Setting up&nbsp;Webpack</h3>
 <p>As mentioned I will be using Webpack to bundle the JavaScript assets for the client application. The bundled assets (main.min.js) will eventually be served from a local webserver. Webpack can package up other assets like templates and stylesheets as&nbsp;well.</p>
-<pre><code>webpack.config.js
+<script src="https://gist.github.com/james-gardner/4b13090baccb3649d65e.js"></script>
 
-module.exports = {
-    entry: &#39;./main.js&#39;,
-
-    output: {
-        path: __dirname + &#39;/dist&#39;,
-        filename: &#39;main.min.js&#39;
-    },
-
-    plugins: [
-        new webpack.ProvidePlugin({
-            $ : &#39;jquery&#39;,
-            Backbone : &#39;backbone&#39;
-        })
-    ]
-};
-</code></pre><p>Discuss: Alternatively bring the various dependencies like underscore and backbone in through a&nbsp;<span class="caps">CDN</span>. </p>
+<p>Discuss: Alternatively bring the various dependencies like underscore and backbone in through a&nbsp;<span class="caps">CDN</span>. </p>
 <h3 id="getting-to-work">Getting to&nbsp;Work</h3>
 <p>Let’s start with a basic view and template that we’ll use later&nbsp;on.</p>
-<pre><code>welcome.view.js
+<script src="https://gist.github.com/james-gardner/34a6512a2d944a5abcf9.js"></script>
 
-var View = Backbone.View.extend({
-    template : require(&#39;../templates/welcome.html&#39;),
-
-    render : function () {
-        this.$el.html(this.template());
-
-        return this;
-    } 
-});
-
-module.exports = View;
-</code></pre><h3 id="templates">Templates</h3>
+<h3 id="templates">Templates</h3>
 <p>In the above example I require’d a template into my view. There are a number of different template engines I could use but I’ve chosen to stick with underscore for this example. By default webpack will assume your require’d resource to be JavaScript unless told otherwise. This is where loaders come in. We need something to tell webpack that our html resources should be treated as underscore&nbsp;templates.</p>
 <p>We can build in support for underscore templates by installing a specialized&nbsp;loader:</p>
-<pre><code>npm install --save-dev underscore-template-loader
+<pre><code>$ npm install --save-dev underscore-template-loader
 </code></pre><p>And then adding the following to the webpack.config.js&nbsp;file:</p>
 <pre><code>module: {
     loaders: [
@@ -91,30 +65,11 @@ module.exports = View;
 <pre><code>&lt;h1&gt;Welcome!&lt;/h1&gt;
 </code></pre><h3 id="bootstrapping">Bootstrapping</h3>
 <p>If you cast your eye back to the webpack.config.js file you will see the ‘entry’ property, used to point Webpack at an applications entry point. I’ve set app.js to be the main entry point and I’m going to set up a quick and dirty Backbone.Router within there. The router only has one default route which cranks up the view we just&nbsp;created.</p>
-<pre><code>var WelcomeView = require(&#39;./scripts/welcome.view.js&#39;), 
-    Router;
+<script src="https://gist.github.com/james-gardner/b55306e31d0dc70d49f2.js"></script>
 
-Router = Backbone.Router.extend({
-
-  routes: {
-    &#39;&#39; : &#39;home&#39;
-  },
-
-  home : function() {
-    var view = new WelcomeView();
-
-    $(&#39;main&#39;).append(view.render().el);
-  }
-});
-
-$(function () {
-  new Router();
-
-  Backbone.history.start();
-});
-</code></pre><h3 id="stylesheets">Stylesheets</h3>
+<h3 id="stylesheets">Stylesheets</h3>
 <h3 id="production">Production</h3>
-<pre><code>webpack -p (uglify kicks in by default)
+<pre><code>$ webpack -p (uglify kicks in by default)
 </code></pre><h3 id="further-reading-and-useful-links">Further Reading and Useful&nbsp;Links</h3>
 <ul>
 <li><a href="http://web-design-weekly.com/2014/09/24/diving-webpack/">http://web-design-weekly.com/2014/09/24/diving-webpack/</a></li>
@@ -125,12 +80,12 @@ $(function () {
 </section>
         </article>
         <footer class="author">
-          <h4>About the author</h4><small class="author">James Gardner is a front-end specialist at Backdesk Solutions in Bath, UK. He's passionate about all things web with a special place in his heart set aside for JavaScript.</small>
+          <h4>About the author</h4><small class="author">James Gardner is a front-end specialist at Backdesk Solutions in Bath, UK. He's passionate about all things web with a special place in his heart for JavaScript.</small>
         </footer>
       </main>
     </div>
     <footer class="footer">
-      <section class="about"><span class="social"><i class="fa fa-facebook"></i><i class="fa fa-twitter"></i><i class="fa fa-github"></i><i class="fa fa-linkedin"></i></span><small>
+      <section class="about"><span class="social"><a href="" target="blank"><i class="fa fa-facebook"></i></a><a href="" target="blank"><i class="fa fa-twitter"></i></a><a href="https://github.com/backdesk" target="blank"><i class="fa fa-github"></i></a><a href="https://uk.linkedin.com/pub/james-gardner/4a/793/233" target="blank"><i class="fa fa-linkedin"></i></a></span><small>
           Backdesk Solutions is a limited company registered in England and Wales. 
           Company registration No. 09224652. VAT registration No. 200147179.</small></section>
       <section class="copy"><small>&copy; 2015 Backdesk Solutions Ltd</small></section>

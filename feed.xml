@@ -17,53 +17,27 @@
       <description>&lt;p&gt;This is a very short guide demonstrating how to structure an application using Backbone and Webpack. &lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&quot;getting-started&quot;&gt;Getting started&lt;/h3&gt;
-&lt;p&gt;You can skip this part if you’re already familiar with installing packages using NPM and alternatively if you just want the package.json file you can find it here.&lt;/p&gt;
+&lt;p&gt;You can skip this part if you’re already familiar with installing packages using NPM and alternatively if you just want the package.json file you can find it &lt;a href=&quot;https://gist.github.com/james-gardner/e78d64453f30fc27ff49&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The first thing I’m going to do is create a package.json file. Create a new folder called ‘boilerplate’ and open it within a terminal.&lt;/p&gt;
 &lt;p&gt;Type the following command (you can accept the default options):&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;npm init
+&lt;pre&gt;&lt;code&gt;$ npm init
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Next we’ll start bringing in the dependencies we need for our stack&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;npm install --save-dev jquery underscore backbone webpack grunt
+&lt;pre&gt;&lt;code&gt;$ npm install --save-dev jquery underscore backbone webpack grunt
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;project-structure&quot;&gt;Project Structure&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;app.js - main entry point
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;setting-up-webpack&quot;&gt;Setting up Webpack&lt;/h3&gt;
 &lt;p&gt;As mentioned I will be using Webpack to bundle the JavaScript assets for the client application. The bundled assets (main.min.js) will eventually be served from a local webserver. Webpack can package up other assets like templates and stylesheets as well.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;webpack.config.js
+&lt;script src=&quot;https://gist.github.com/james-gardner/4b13090baccb3649d65e.js&quot;&gt;&lt;/script&gt;
 
-module.exports = {
-    entry: &amp;#39;./main.js&amp;#39;,
-
-    output: {
-        path: __dirname + &amp;#39;/dist&amp;#39;,
-        filename: &amp;#39;main.min.js&amp;#39;
-    },
-
-    plugins: [
-        new webpack.ProvidePlugin({
-            $ : &amp;#39;jquery&amp;#39;,
-            Backbone : &amp;#39;backbone&amp;#39;
-        })
-    ]
-};
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Discuss: Alternatively bring the various dependencies like underscore and backbone in through a CDN. &lt;/p&gt;
+&lt;p&gt;Discuss: Alternatively bring the various dependencies like underscore and backbone in through a CDN. &lt;/p&gt;
 &lt;h3 id=&quot;getting-to-work&quot;&gt;Getting to Work&lt;/h3&gt;
 &lt;p&gt;Let’s start with a basic view and template that we’ll use later on.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;welcome.view.js
+&lt;script src=&quot;https://gist.github.com/james-gardner/34a6512a2d944a5abcf9.js&quot;&gt;&lt;/script&gt;
 
-var View = Backbone.View.extend({
-    template : require(&amp;#39;../templates/welcome.html&amp;#39;),
-
-    render : function () {
-        this.$el.html(this.template());
-
-        return this;
-    } 
-});
-
-module.exports = View;
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;templates&quot;&gt;Templates&lt;/h3&gt;
+&lt;h3 id=&quot;templates&quot;&gt;Templates&lt;/h3&gt;
 &lt;p&gt;In the above example I require’d a template into my view. There are a number of different template engines I could use but I’ve chosen to stick with underscore for this example. By default webpack will assume your require’d resource to be JavaScript unless told otherwise. This is where loaders come in. We need something to tell webpack that our html resources should be treated as underscore templates.&lt;/p&gt;
 &lt;p&gt;We can build in support for underscore templates by installing a specialized loader:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;npm install --save-dev underscore-template-loader
+&lt;pre&gt;&lt;code&gt;$ npm install --save-dev underscore-template-loader
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And then adding the following to the webpack.config.js file:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;module: {
     loaders: [
@@ -74,30 +48,11 @@ module.exports = View;
 &lt;pre&gt;&lt;code&gt;&amp;lt;h1&amp;gt;Welcome!&amp;lt;/h1&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;bootstrapping&quot;&gt;Bootstrapping&lt;/h3&gt;
 &lt;p&gt;If you cast your eye back to the webpack.config.js file you will see the ‘entry’ property, used to point Webpack at an applications entry point. I’ve set app.js to be the main entry point and I’m going to set up a quick and dirty Backbone.Router within there. The router only has one default route which cranks up the view we just created.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;var WelcomeView = require(&amp;#39;./scripts/welcome.view.js&amp;#39;), 
-    Router;
+&lt;script src=&quot;https://gist.github.com/james-gardner/b55306e31d0dc70d49f2.js&quot;&gt;&lt;/script&gt;
 
-Router = Backbone.Router.extend({
-
-  routes: {
-    &amp;#39;&amp;#39; : &amp;#39;home&amp;#39;
-  },
-
-  home : function() {
-    var view = new WelcomeView();
-
-    $(&amp;#39;main&amp;#39;).append(view.render().el);
-  }
-});
-
-$(function () {
-  new Router();
-
-  Backbone.history.start();
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;stylesheets&quot;&gt;Stylesheets&lt;/h3&gt;
+&lt;h3 id=&quot;stylesheets&quot;&gt;Stylesheets&lt;/h3&gt;
 &lt;h3 id=&quot;production&quot;&gt;Production&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;webpack -p (uglify kicks in by default)
+&lt;pre&gt;&lt;code&gt;$ webpack -p (uglify kicks in by default)
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;further-reading-and-useful-links&quot;&gt;Further Reading and Useful Links&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://web-design-weekly.com/2014/09/24/diving-webpack/&quot;&gt;http://web-design-weekly.com/2014/09/24/diving-webpack/&lt;/a&gt;&lt;/li&gt;
@@ -139,12 +94,12 @@ $(function () {
 </description>
     </item>
     <item>
-      <title>Backbone Architecture</title>
+      <title>Backbone - A Refresher</title>
       <link>http://localhost:7777/articles/backbone-arch-part1/</link>
       <pubDate>Tue, 14 Oct 2014 00:00:00 +0000</pubDate>
       <guid isPermaLink="true">http://localhost:7777/articles/backbone-arch-part1/</guid>
       <author></author>
-      <description>&lt;p&gt;Praesent quis felis at nulla venenatis tincidunt. Phasellus elementum ac magna a placerat. Proin hendrerit neque dapibus aliquam pharetra. Nunc sed libero vitae arcu pulvinar luctus a vitae risus. Sed viverra bibendum libero eget fermentum.&lt;/p&gt;
+      <description>&lt;p&gt;Out of the box Backbone is not a framework.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&quot;phasellus-dictum-lectus-non-pharetra-pellentesqu&quot;&gt;Phasellus Dictum, Lectus non Pharetra Pellentesqu&lt;/h3&gt;
 &lt;p&gt;Phasellus dictum, lectus non pharetra pellentesque, libero ligula viverra sapien, et volutpat ante lectus ac nunc. Duis varius convallis risus, eget scelerisque justo hendrerit et. Phasellus rhoncus, neque ac congue lobortis, massa neque sodales sem, vel congue enim purus et purus. Proin eget neque rhoncus, feugiat erat eu, aliquam nunc. Vivamus quis ante et ex imperdiet convallis. Cras pellentesque eros est, nec imperdiet urna elementum quis. Integer blandit elit at nibh ornare, eu tincidunt lorem volutpat. Proin vel arcu lectus. Etiam vitae viverra orci. In ac sem iaculis, blandit lorem at, rutrum neque. Integer ac mi eget mi bibendum convallis.&lt;/p&gt;

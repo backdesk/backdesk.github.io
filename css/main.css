@@ -163,7 +163,7 @@ aside {
 
 code {
   font-family: 'Anonymous Pro', monospace;
-  font-size: 0.85em;
+  font-size: 0.75em;
   color: #000; }
 
 pre code {
@@ -174,7 +174,7 @@ code {
   padding: 1em;
   border-radius: 0.3em;
   position: relative;
-  background: #eee;
+  border: 1px solid #dddddd;
   overflow: hidden; }
 
 .button {
@@ -274,6 +274,8 @@ main {
     font-size: 1.6em;
     display: block;
     text-align: center; }
+    .footer .social a {
+      color: white; }
     .footer .social i {
       margin: 0.5em; }
 
