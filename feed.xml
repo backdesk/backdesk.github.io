@@ -110,17 +110,32 @@
     </item>
     <item>
       <title>Backbone - A Refresher</title>
-      <link>http://localhost:7777/articles/backbone-arch-part1/</link>
+      <link>http://localhost:7777/articles/backbone-refresher/</link>
       <pubDate>Tue, 14 Oct 2014 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">http://localhost:7777/articles/backbone-arch-part1/</guid>
+      <guid isPermaLink="true">http://localhost:7777/articles/backbone-refresher/</guid>
       <author></author>
-      <description>&lt;p&gt;Out of the box Backbone is not a framework.&lt;/p&gt;
+      <description>&lt;p&gt;I haven’t been actively using Backbone for a couple of months now.&lt;/p&gt;
 &lt;hr&gt;
+&lt;h3 id=&quot;the-nature-of-backbone&quot;&gt;The Nature of Backbone&lt;/h3&gt;
+&lt;p&gt;Out of the box Backbone is an unopinionated library for bringing structure to an application. It provides you with data-modelling, bare-bone views and a router. That’s probably all you’re going to need for a small and simple application.&lt;/p&gt;
+&lt;p&gt;It’s unopinionated because it’s intended to be used as a foundation library rather than a framework.&lt;/p&gt;
+&lt;h4 id=&quot;is-backbone-mvp-&quot;&gt;Is Backbone MVP?&lt;/h4&gt;
+&lt;p&gt;As part of this refresher I will try and define what MVP (Model View Presenter) actually is.&lt;/p&gt;
+&lt;p&gt;A presenter can be defined as a logical entity that makes decisions on behalf of a view. The intention behind it is to provide improve the testability so the view
+should be dumbed down and delegate to its presenter.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2056/what-are-mvp-and-mvc-and-what-is-the-difference&quot;&gt;http://stackoverflow.com/questions/2056/what-are-mvp-and-mvc-and-what-is-the-difference&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;use-promises&quot;&gt;Use Promises&lt;/h3&gt;
+&lt;p&gt;Even if jQuery’s deferred objects aren’t A+ they’re still extremely useful in Backbone.&lt;/p&gt;
+&lt;p&gt;   model.save().then(success, failure)&lt;/p&gt;
+&lt;p&gt;There’s nothing stopping you from adopting a different promise library. The point I wish to make is that it’s easy to get sucked into using events like ‘sync’ or callbacks and not seeing the light of day for a while.&lt;/p&gt;
+&lt;h3 id=&quot;modules&quot;&gt;Modules&lt;/h3&gt;
+&lt;h3 id=&quot;boilerplates&quot;&gt;Boilerplates&lt;/h3&gt;
+&lt;h3 id=&quot;marionette&quot;&gt;Marionette&lt;/h3&gt;
+&lt;h3 id=&quot;thorax&quot;&gt;Thorax&lt;/h3&gt;
+&lt;h3 id=&quot;chaplin&quot;&gt;Chaplin&lt;/h3&gt;
+&lt;p&gt;I would greet Chaplin with more enthusiasm if it weren’t for the fact that their source is written in CoffeeScript. It’s an obstacle for those who are unfamiliar with the syntax and have no need to learn it. Interestingly Jeremy Ashkenas, the creator of Backbone.js&lt;/p&gt;
 &lt;h3 id=&quot;phasellus-dictum-lectus-non-pharetra-pellentesqu&quot;&gt;Phasellus Dictum, Lectus non Pharetra Pellentesqu&lt;/h3&gt;
-&lt;p&gt;Phasellus dictum, lectus non pharetra pellentesque, libero ligula viverra sapien, et volutpat ante lectus ac nunc. Duis varius convallis risus, eget scelerisque justo hendrerit et. Phasellus rhoncus, neque ac congue lobortis, massa neque sodales sem, vel congue enim purus et purus. Proin eget neque rhoncus, feugiat erat eu, aliquam nunc. Vivamus quis ante et ex imperdiet convallis. Cras pellentesque eros est, nec imperdiet urna elementum quis. Integer blandit elit at nibh ornare, eu tincidunt lorem volutpat. Proin vel arcu lectus. Etiam vitae viverra orci. In ac sem iaculis, blandit lorem at, rutrum neque. Integer ac mi eget mi bibendum convallis.&lt;/p&gt;
-&lt;p&gt;Cras ut sagittis augue. Integer id semper orci. Praesent at dignissim tellus. Nunc non quam pretium, dictum metus quis, gravida sapien. In iaculis ornare varius. Aenean et nulla bibendum quam sodales venenatis in at neque. Fusce non leo quis tortor suscipit fringilla in non tellus. Fusce non enim ipsum. Phasellus id sapien id libero ultricies suscipit tempor et lectus. Proin ac sagittis nibh. Donec suscipit eu dui a faucibus.&lt;/p&gt;
-&lt;h3 id=&quot;sed-cursus-consequat-dapibus&quot;&gt;Sed Cursus Consequat Dapibus&lt;/h3&gt;
-&lt;p&gt;In vulputate lobortis accumsan. Aenean tincidunt vestibulum purus. In vulputate nec diam a pellentesque. Duis luctus ultrices velit id rutrum. Nam pharetra gravida ex, ullamcorper feugiat arcu tristique ac. Phasellus eget ligula nisi. Duis viverra metus eu tortor accumsan, at pulvinar tellus egestas. Donec ut lacus dolor.&lt;/p&gt;
+&lt;p&gt;Phasellus dictum, lectus non pharetra pellentesque, libero ligula viverra sapien, et volutpat ante lectus ac nunc. Duis varius convallis risus, eget scelerisque justo hendrerit et.&lt;/p&gt;
 </description>
     </item>
     <item>
