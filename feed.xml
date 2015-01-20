@@ -5,9 +5,24 @@
     <atom:link href="http://localhost:7777/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://localhost:7777</link>
     <description>Digital content done right</description>
-    <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Wrapping 'window.console'</title>
+      <link>http://localhost:7777/articles/wrapping-console/</link>
+      <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">http://localhost:7777/articles/wrapping-console/</guid>
+      <author></author>
+      <description>&lt;p&gt;I try and keep console usage like ‘.log’ to a minimum and use breakpoints where possible. There are lots of other useful console methods available to us but I would like to be able to be able to toggle those on and off.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;the-code&quot;&gt;The Code&lt;/h3&gt;
+&lt;script src=&quot;https://gist.github.com/james-gardner/e6bc873d08a586c7d17b.js&quot;&gt;&lt;/script&gt;
+
+&lt;h3 id=&quot;review-and-conclusion&quot;&gt;Review and Conclusion&lt;/h3&gt;
+&lt;p&gt;Ut varius orci quis ex facilisis, et convallis sem sodales. Praesent ultricies, eros condimentum bibendum luctus, est purus commodo enim, nec lacinia est nulla ut ipsum. Fusce vulputate scelerisque neque, vel ultricies nisl scelerisque a. Donec convallis laoreet ipsum id pharetra. Pellentesque ac dui in ante pulvinar sodales ullamcorper sed velit. Donec finibus commodo elit, a eleifend magna ultricies non. Morbi ultricies sollicitudin libero, a luctus nisi scelerisque sed. Etiam accumsan mauris at velit faucibus, egestas consequat lacus posuere. Praesent feugiat volutpat sapien, in sodales lorem luctus vehicula.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Using Backbone with Webpack</title>
       <link>http://localhost:7777/articles/backbone-webpack/</link>
@@ -75,21 +90,6 @@
 &lt;p&gt;Cras ut sagittis augue. Integer id semper orci. Praesent at dignissim tellus. Nunc non quam pretium, dictum metus quis, gravida sapien. In iaculis ornare varius. Aenean et nulla bibendum quam sodales venenatis in at neque. Fusce non leo quis tortor suscipit fringilla in non tellus. Fusce non enim ipsum. Phasellus id sapien id libero ultricies suscipit tempor et lectus. Proin ac sagittis nibh. Donec suscipit eu dui a faucibus.&lt;/p&gt;
 &lt;h3 id=&quot;sed-cursus-consequat-dapibus&quot;&gt;Sed Cursus Consequat Dapibus&lt;/h3&gt;
 &lt;p&gt;In vulputate lobortis accumsan. Aenean tincidunt vestibulum purus. In vulputate nec diam a pellentesque. Duis luctus ultrices velit id rutrum. Nam pharetra gravida ex, ullamcorper feugiat arcu tristique ac. Phasellus eget ligula nisi. Duis viverra metus eu tortor accumsan, at pulvinar tellus egestas. Donec ut lacus dolor.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Wrapping 'window.console'</title>
-      <link>http://localhost:7777/articles/wrapping-console/</link>
-      <pubDate>Mon, 12 Jan 2015 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">http://localhost:7777/articles/wrapping-console/</guid>
-      <author></author>
-      <description>&lt;p&gt;I try and keep console usage like ‘.log’ to a minimum and use breakpoints where possible. There are lots of other useful console methods available to us but I would like to be able to be able to toggle those on and off.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;the-code&quot;&gt;The Code&lt;/h3&gt;
-&lt;script src=&quot;https://gist.github.com/james-gardner/e6bc873d08a586c7d17b.js&quot;&gt;&lt;/script&gt;
-
-&lt;h3 id=&quot;review-and-conclusion&quot;&gt;Review and Conclusion&lt;/h3&gt;
-&lt;p&gt;Ut varius orci quis ex facilisis, et convallis sem sodales. Praesent ultricies, eros condimentum bibendum luctus, est purus commodo enim, nec lacinia est nulla ut ipsum. Fusce vulputate scelerisque neque, vel ultricies nisl scelerisque a. Donec convallis laoreet ipsum id pharetra. Pellentesque ac dui in ante pulvinar sodales ullamcorper sed velit. Donec finibus commodo elit, a eleifend magna ultricies non. Morbi ultricies sollicitudin libero, a luctus nisi scelerisque sed. Etiam accumsan mauris at velit faucibus, egestas consequat lacus posuere. Praesent feugiat volutpat sapien, in sodales lorem luctus vehicula.&lt;/p&gt;
 </description>
     </item>
     <item>
