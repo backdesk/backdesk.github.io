@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <title>Backdesk
+    <title>Wrapping 'window.console' - Backdesk
     </title>
     <link rel="alternate" href="http://localhost:7777/feed.xml" type="application/rss+xml" title="Digital content done right">
     <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600|Lato:400,700,900|Roboto:400,300,100,700,500" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/css/font-awesome.css">
     <link rel="stylesheet" href="/css/main.css">
   </head>
-  <body>
+  <body class="article-detail">
     <header class="header">
       <div class="menu"><a href="#menu"><i class="fa fa-bars"></i></a></div>
       <div class="logo">
@@ -27,37 +27,22 @@
         </div>
       </aside>
       <main>
-        <section class="archive">
-          <h2>Archive</h2>
-          <ul>
-            <li><span style="line-height:8.8em" class="year-label">2015</span>
-              <ul style="margin-left:4em">
-                <li><span style="line-height:8.8em" class="month-label">January</span>
-                  <ul style="margin-left:7em">
-                    <li style="height:2.2em;line-height:2.2em;"><a href="/articles/backbone-webpack/">Using Backbone with Webpack</a></li>
-                    <li style="height:2.2em;line-height:2.2em;"><a href="/articles/contractors-guide/">A Guide to Contracting</a></li>
-                    <li style="height:2.2em;line-height:2.2em;"><a href="/articles/wintersmith-github/">Driving Github Pages with WinterSmith and Travis CI</a></li>
-                    <li style="height:2.2em;line-height:2.2em;"><a href="/articles/wrapping-console/">Wrapping 'window.console'</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><span style="line-height:4.4em" class="year-label">2014</span>
-              <ul style="margin-left:4em">
-                <li><span style="line-height:2.2em" class="month-label">October</span>
-                  <ul style="margin-left:7em">
-                    <li style="height:2.2em;line-height:2.2em;"><a href="/articles/backbone-arch-part1/">Backbone - A Refresher</a></li>
-                  </ul>
-                </li>
-                <li><span style="line-height:2.2em" class="month-label">January</span>
-                  <ul style="margin-left:7em">
-                    <li style="height:2.2em;line-height:2.2em;"><a href="/articles/mobile-first/">Mobile First, Does it Work?</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </section>
+        <article class="article">
+          <header>
+            <h2>Wrapping 'window.console'</h2>
+          </header>
+          <section class="content"><p>I try and keep console usage like ‘.log’ to a minimum and use breakpoints where possible. There are lots of other useful console methods available to us but I would like to be able to be able to toggle those on and&nbsp;off.</p>
+<hr>
+<h3 id="the-code">The&nbsp;Code</h3>
+<script src="https://gist.github.com/james-gardner/e6bc873d08a586c7d17b.js"></script>
+
+<h3 id="review-and-conclusion">Review and&nbsp;Conclusion</h3>
+<p>Ut varius orci quis ex facilisis, et convallis sem sodales. Praesent ultricies, eros condimentum bibendum luctus, est purus commodo enim, nec lacinia est nulla ut ipsum. Fusce vulputate scelerisque neque, vel ultricies nisl scelerisque a. Donec convallis laoreet ipsum id pharetra. Pellentesque ac dui in ante pulvinar sodales ullamcorper sed velit. Donec finibus commodo elit, a eleifend magna ultricies non. Morbi ultricies sollicitudin libero, a luctus nisi scelerisque sed. Etiam accumsan mauris at velit faucibus, egestas consequat lacus posuere. Praesent feugiat volutpat sapien, in sodales lorem luctus&nbsp;vehicula.</p>
+</section>
+        </article>
+        <footer class="author">
+          <h4>About the author</h4><small class="author">James Gardner is a front-end specialist at Backdesk Solutions in Bath, UK. He's passionate about all things web with a special place in his heart for JavaScript.</small>
+        </footer>
       </main>
     </div>
     <footer class="footer">
