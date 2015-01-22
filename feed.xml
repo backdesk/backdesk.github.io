@@ -168,7 +168,7 @@ way that the MVC responsibilities are divided between the client and server.&quo
 http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
 --&gt;
 
-&lt;h3 id=&quot;is-backbone-s-view-a-controller-&quot;&gt;Is Backbone’s ‘View’ a Controller?&lt;/h3&gt;
+&lt;h3 id=&quot;is-backbone-view-a-controller-&quot;&gt;Is Backbone.View a Controller?&lt;/h3&gt;
 &lt;p&gt;It’s tricky to find a ‘one size fits all’ definition of a controller and its responsibilities. Responsibilities
 are open to interpretation based on the platform [1] and framework you’re using. I think that the underlying
 principle rests at separating concerns. How a code base achieves this separation is what ultimately
@@ -176,13 +176,18 @@ defines the role of a controller.&lt;/p&gt;
 &lt;p&gt;In a bare bone Backbone application ‘Backbone.View’ could be considered a controller as its logic drives a
 ‘dumb view’ aspect using templates. Model events and user interactions are handled within the view logic
 and reflected in the rendered template.&lt;/p&gt;
+&lt;h3 id=&quot;scaling-complexity&quot;&gt;Scaling Complexity&lt;/h3&gt;
+&lt;p&gt;A primary gain from MVC should be that business logic can be presented in different ways and tested in
+isolation [3]. As new functionality is required we can introduce new actors but the flip side of adding more is
+that there’s more things to manage. Not so much that but there are more relationships to manage.&lt;/p&gt;
+&lt;p&gt;MVC doesn’t seem to scale [4] in large applications.&lt;/p&gt;
+&lt;h3 id=&quot;marionette-controller&quot;&gt;Marionette.Controller&lt;/h3&gt;
+&lt;p&gt;Marionette [5]&lt;/p&gt;
 &lt;!--
 
 This approach will get you quite far and bring structure and order beyond using standard page objects.
 
-A primary gain from MVC should be that business logic can be presented in different ways and tested in
-isolation by itself [3]. When complexity increases the application could be scaled with the introduction of
-additonal controllers [4].
+
 
 Sub views
     Views that conditionally render content within their own container.
@@ -198,6 +203,7 @@ Controllers without internal view logic.
 [2]
 [3]
 [4] http://www.infoq.com/news/2014/05/facebook-mvc-flux
+[5] http://marionettejs.com/
 --&gt;</description>
     </item>
     <item>
