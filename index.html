@@ -73,7 +73,6 @@
             <h3><a href="/articles/backbone-mvc-mvp/">Backbone - MV ... What?</a></h3>
           </header>
           <section class="content"><!--
-Are Backbone's Views Controllers?
 
 What are the high level responsibilities of each?
 
@@ -137,31 +136,18 @@ and reflected in the rendered&nbsp;template.</p>
 <h3 id="scaling-complexity">Scaling&nbsp;Complexity</h3>
 <p>A primary gain from <span class="caps">MVC</span> should be that business logic can be presented in different ways and tested in
 isolation [3]. We should then in theory be able to add new views when&nbsp;required.</p>
-<p><span class="caps">MVC</span> doesn’t seem to scale [4] in large&nbsp;applications.</p>
+<p>[[
+    Example of contextual data with business rules applied
+    Show a Backbone.View conditionally rendering a template for this data&nbsp;]]</p>
+<p>We now have two ‘dumb views’ (templates) rendered conditionally by&nbsp;Backbone.View</p>
+<p>Decision making and cross over of app&nbsp;domains.</p>
+<p><span class="caps">MVC</span> doesn’t seem to scale [4] in large applications. Too many&nbsp;entities.</p>
 <h3 id="marionette-controller">Marionette.Controller</h3>
 <p>Marionette&nbsp;[5]</p>
-<!--
-
-This approach will get you quite far and bring structure and order beyond using standard page objects.
-
-
-
-Sub views
-    Views that conditionally render content within their own container.
-
-Layouts
-    Hook on to 'regions' of a template and assign views to regions.
-
-Controllers without internal view logic.
-    In other words logic that renders a conditionally renders a view based on state.
-    Not unlike a router.
-
-[1]
-[2]
-[3]
-[4] http://www.infoq.com/news/2014/05/facebook-mvc-flux
-[5] http://marionettejs.com/
---><small class="meta"><span class="meta">Posted 14th Oct 2014</span><span class="tags">
+<h3 id="controller-views">Controller&nbsp;Views</h3>
+<p>I tend to think of Backbone.View as a ‘Controller View’ type of actor where views can be nested within one another
+in a similar fashion to how they might appear within the <span class="caps">DOM</span>&nbsp;hierarchy.</p>
+<small class="meta"><span class="meta">Posted 14th Oct 2014</span><span class="tags">
                 <!-- TODO: Move to mixin.--><a href="/tags/javascript.html" class="tag">javascript</a><a href="/tags/backbone.html" class="tag">backbone</a><a href="/tags/html5.html" class="tag">html5</a></span></small>
           </section>
         </article>

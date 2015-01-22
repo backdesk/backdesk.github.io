@@ -115,7 +115,6 @@
       <guid isPermaLink="true">http://localhost:7777/articles/backbone-mvc-mvp/</guid>
       <author></author>
       <description>&lt;!--
-Are Backbone's Views Controllers?
 
 What are the high level responsibilities of each?
 
@@ -179,9 +178,22 @@ and reflected in the rendered template.&lt;/p&gt;
 &lt;h3 id=&quot;scaling-complexity&quot;&gt;Scaling Complexity&lt;/h3&gt;
 &lt;p&gt;A primary gain from MVC should be that business logic can be presented in different ways and tested in
 isolation [3]. We should then in theory be able to add new views when required.&lt;/p&gt;
-&lt;p&gt;MVC doesn’t seem to scale [4] in large applications.&lt;/p&gt;
+&lt;p&gt;[[
+    Example of contextual data with business rules applied
+    Show a Backbone.View conditionally rendering a template for this data
+]]&lt;/p&gt;
+&lt;p&gt;We now have two ‘dumb views’ (templates) rendered conditionally by Backbone.View&lt;/p&gt;
+&lt;p&gt;Decision making and cross over of app domains.&lt;/p&gt;
+&lt;p&gt;MVC doesn’t seem to scale [4] in large applications. Too many entities.&lt;/p&gt;
 &lt;h3 id=&quot;marionette-controller&quot;&gt;Marionette.Controller&lt;/h3&gt;
 &lt;p&gt;Marionette [5]&lt;/p&gt;
+&lt;h3 id=&quot;controller-views&quot;&gt;Controller Views&lt;/h3&gt;
+&lt;p&gt;I tend to think of Backbone.View as a ‘Controller View’ type of actor where views can be nested within one another
+in a similar fashion to how they might appear within the DOM hierarchy.&lt;/p&gt;
+&lt;h2 id=&quot;marionette-layout&quot;&gt;Marionette.Layout&lt;/h2&gt;
+&lt;p&gt;For situations where you need to simply house a number of views within different regions.
+Prescriptively define the regions each view belongs to and render them.&lt;/p&gt;
+&lt;p&gt;Similar to setElement.&lt;/p&gt;
 &lt;!--
 
 This approach will get you quite far and bring structure and order beyond using standard page objects.
