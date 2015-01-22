@@ -178,8 +178,7 @@ defines the role of a controller.&lt;/p&gt;
 and reflected in the rendered template.&lt;/p&gt;
 &lt;h3 id=&quot;scaling-complexity&quot;&gt;Scaling Complexity&lt;/h3&gt;
 &lt;p&gt;A primary gain from MVC should be that business logic can be presented in different ways and tested in
-isolation [3]. As new functionality is required we can introduce new actors but the flip side of adding more is
-that there’s more things to manage. Not so much that but there are more relationships to manage.&lt;/p&gt;
+isolation [3]. We should then in theory be able to add new views when required.&lt;/p&gt;
 &lt;p&gt;MVC doesn’t seem to scale [4] in large applications.&lt;/p&gt;
 &lt;h3 id=&quot;marionette-controller&quot;&gt;Marionette.Controller&lt;/h3&gt;
 &lt;p&gt;Marionette [5]&lt;/p&gt;
