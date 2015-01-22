@@ -24,6 +24,21 @@
 </description>
     </item>
     <item>
+      <title>A Guide to Contracting</title>
+      <link>http://localhost:7777/articles/contractors-guide/</link>
+      <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">http://localhost:7777/articles/contractors-guide/</guid>
+      <author></author>
+      <description>&lt;p&gt;Praesent quis felis at nulla venenatis tincidunt. Phasellus elementum ac magna a placerat. Proin hendrerit neque dapibus aliquam pharetra. Nunc sed libero vitae arcu pulvinar luctus a vitae risus. Sed viverra bibendum libero eget fermentum.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;phasellus-dictum-lectus-non-pharetra-pellentesqu&quot;&gt;Phasellus Dictum, Lectus non Pharetra Pellentesqu&lt;/h3&gt;
+&lt;p&gt;Phasellus dictum, lectus non pharetra pellentesque, libero ligula viverra sapien, et volutpat ante lectus ac nunc. Duis varius convallis risus, eget scelerisque justo hendrerit et. Phasellus rhoncus, neque ac congue lobortis, massa neque sodales sem, vel congue enim purus et purus. Proin eget neque rhoncus, feugiat erat eu, aliquam nunc. Vivamus quis ante et ex imperdiet convallis. Cras pellentesque eros est, nec imperdiet urna elementum quis. Integer blandit elit at nibh ornare, eu tincidunt lorem volutpat. Proin vel arcu lectus. Etiam vitae viverra orci. In ac sem iaculis, blandit lorem at, rutrum neque. Integer ac mi eget mi bibendum convallis.&lt;/p&gt;
+&lt;p&gt;Cras ut sagittis augue. Integer id semper orci. Praesent at dignissim tellus. Nunc non quam pretium, dictum metus quis, gravida sapien. In iaculis ornare varius. Aenean et nulla bibendum quam sodales venenatis in at neque. Fusce non leo quis tortor suscipit fringilla in non tellus. Fusce non enim ipsum. Phasellus id sapien id libero ultricies suscipit tempor et lectus. Proin ac sagittis nibh. Donec suscipit eu dui a faucibus.&lt;/p&gt;
+&lt;h3 id=&quot;sed-cursus-consequat-dapibus&quot;&gt;Sed Cursus Consequat Dapibus&lt;/h3&gt;
+&lt;p&gt;In vulputate lobortis accumsan. Aenean tincidunt vestibulum purus. In vulputate nec diam a pellentesque. Duis luctus ultrices velit id rutrum. Nam pharetra gravida ex, ullamcorper feugiat arcu tristique ac. Phasellus eget ligula nisi. Duis viverra metus eu tortor accumsan, at pulvinar tellus egestas. Donec ut lacus dolor.&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>Using Backbone with Webpack</title>
       <link>http://localhost:7777/articles/backbone-webpack/</link>
       <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
@@ -78,21 +93,6 @@
 --&gt;</description>
     </item>
     <item>
-      <title>A Guide to Contracting</title>
-      <link>http://localhost:7777/articles/contractors-guide/</link>
-      <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">http://localhost:7777/articles/contractors-guide/</guid>
-      <author></author>
-      <description>&lt;p&gt;Praesent quis felis at nulla venenatis tincidunt. Phasellus elementum ac magna a placerat. Proin hendrerit neque dapibus aliquam pharetra. Nunc sed libero vitae arcu pulvinar luctus a vitae risus. Sed viverra bibendum libero eget fermentum.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;phasellus-dictum-lectus-non-pharetra-pellentesqu&quot;&gt;Phasellus Dictum, Lectus non Pharetra Pellentesqu&lt;/h3&gt;
-&lt;p&gt;Phasellus dictum, lectus non pharetra pellentesque, libero ligula viverra sapien, et volutpat ante lectus ac nunc. Duis varius convallis risus, eget scelerisque justo hendrerit et. Phasellus rhoncus, neque ac congue lobortis, massa neque sodales sem, vel congue enim purus et purus. Proin eget neque rhoncus, feugiat erat eu, aliquam nunc. Vivamus quis ante et ex imperdiet convallis. Cras pellentesque eros est, nec imperdiet urna elementum quis. Integer blandit elit at nibh ornare, eu tincidunt lorem volutpat. Proin vel arcu lectus. Etiam vitae viverra orci. In ac sem iaculis, blandit lorem at, rutrum neque. Integer ac mi eget mi bibendum convallis.&lt;/p&gt;
-&lt;p&gt;Cras ut sagittis augue. Integer id semper orci. Praesent at dignissim tellus. Nunc non quam pretium, dictum metus quis, gravida sapien. In iaculis ornare varius. Aenean et nulla bibendum quam sodales venenatis in at neque. Fusce non leo quis tortor suscipit fringilla in non tellus. Fusce non enim ipsum. Phasellus id sapien id libero ultricies suscipit tempor et lectus. Proin ac sagittis nibh. Donec suscipit eu dui a faucibus.&lt;/p&gt;
-&lt;h3 id=&quot;sed-cursus-consequat-dapibus&quot;&gt;Sed Cursus Consequat Dapibus&lt;/h3&gt;
-&lt;p&gt;In vulputate lobortis accumsan. Aenean tincidunt vestibulum purus. In vulputate nec diam a pellentesque. Duis luctus ultrices velit id rutrum. Nam pharetra gravida ex, ullamcorper feugiat arcu tristique ac. Phasellus eget ligula nisi. Duis viverra metus eu tortor accumsan, at pulvinar tellus egestas. Donec ut lacus dolor.&lt;/p&gt;
-</description>
-    </item>
-    <item>
       <title>Driving Github Pages with WinterSmith and Travis CI</title>
       <link>http://localhost:7777/articles/wintersmith-github/</link>
       <pubDate>Mon, 12 Jan 2015 00:00:00 +0000</pubDate>
@@ -109,6 +109,83 @@
 </description>
     </item>
     <item>
+      <title>Backbone - MV ... What?</title>
+      <link>http://localhost:7777/articles/backbone-mvc-mvp/</link>
+      <pubDate>Tue, 14 Oct 2014 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">http://localhost:7777/articles/backbone-mvc-mvp/</guid>
+      <author></author>
+      <description>&lt;p&gt;Are Backbone’s Views Controllers?&lt;/p&gt;
+&lt;p&gt;What are the high level responsibilities of each?&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Controllers
+
+&amp;quot;Controller can be imagined as an extension or a personal assistant to the view, all the events
+originated from the view are handled by the controller. Controller will also inform the Model on
+behalf of view that some event happened on the view and some new data might be required.&amp;quot;
+
+http://www.codeproject.com/Articles/288928/Differences-between-MVC-and-MVP-for-Beginners
+
+
+&amp;quot;In the MVC, the Controller is responsible for determining which View is displayed in response to any
+action including when the application loads. This differs from MVP where actions route through the View
+to the Presenter. In MVC, every action in the View correlates with a call to a Controller along with an
+action. In the web each action involves a call to a URL on the other side of which there is a Controller
+who responds. Once that Controller has completed its processing, it will return the correct View.
+The sequence continues in that manner throughout the life of the application&amp;quot;
+
+&amp;quot;One other big difference about MVC is that the View does not directly bind to the Model. The view simply
+renders, and is completely stateless. In implementations of MVC the View usually will not have any
+logic in the code behind. This is contrary to MVP where it is absolutely necessary as if the View does
+not delegate to the Presenter, it will never get called.&amp;quot;
+
+http://stackoverflow.com/questions/4733700/what-is-the-difference-between-controller-in-mvc-pattern-and-presenter-in-mvp-pa
+
+
+&amp;quot;In MVC, the view is updated only by the model (by listening to its events). It is never updated by the controller.
+This is problematic when you need to format model data for the view, hence the need for MVP.&amp;quot; - wrong?
+
+http://stackoverflow.com/questions/4733700/what-is-the-difference-between-controller-in-mvc-pattern-and-presenter-in-mvp-pa
+
+
+http://sourcemaking.com/refactoring/separate-domain-from-presentation
+
+Presenters
+
+In MVP the Presenter assumes the functionality of the &amp;quot;middle-man&amp;quot; (played by the Application Controller in MVC).
+Additionally, the View is responsible for handling the UI events (like mouseDown, keyDown, etc), which used
+to be the Controller&amp;#39;s job. Eventually, the Model becomes strictly a Domain Model.
+
+A presenter can be defined as a logical entity that makes decisions on behalf of a view. The intention behind it
+is to provide improve the testability so the view should be dumbed down and delegate to its presenter.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;“Although originally developed for desktop computing, model–view–controller has been widely adopted as an architecture
+for World Wide Web applications in major programming languages. Several commercial and noncommercial web application
+frameworks have been created that enforce the pattern. These frameworks vary in their interpretations, mainly in the
+way that the MVC responsibilities are divided between the client and server.”&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller&quot;&gt;http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It’s tricky to find a ‘one size fits all’ definition of a controller and its responsibilities. Responsibilities
+are open to interpretation based on the platform [1] and framework you’re using. I think that the underlying
+principle rests at separating concerns. How a code base achieves this separation is what ultimately
+defines the role of a controller.&lt;/p&gt;
+&lt;p&gt;In a bare bone Backbone application ‘Backbone.View’ could be considered a controller as its logic drives a
+‘dumb view’ aspect using templates. Model events and user interactions are all handled within the view logic
+and reflected in the rendered template.&lt;/p&gt;
+&lt;p&gt;This approach will get you quite far and bring structure and order beyond using standard page objects.&lt;/p&gt;
+&lt;p&gt;A primary gain from MVC should be that business logic can be presented in different ways and tested in
+isolation by itself [3]. When complexity increases the application could be scaled with the introduction of
+additonal controllers [4].&lt;/p&gt;
+&lt;p&gt;Sub views
+    Views that conditionally render content within their own container.&lt;/p&gt;
+&lt;p&gt;Layouts
+    Hook on to ‘regions’ of a template and assign views to regions.&lt;/p&gt;
+&lt;p&gt;Controllers without internal view logic.
+    In other words logic that renders a conditionally renders a view based on state.
+    Not unlike a router.&lt;/p&gt;
+&lt;p&gt;[1]
+[2]
+[3]
+[4] &lt;a href=&quot;http://www.infoq.com/news/2014/05/facebook-mvc-flux&quot;&gt;http://www.infoq.com/news/2014/05/facebook-mvc-flux&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>Backbone - A Refresher</title>
       <link>http://localhost:7777/articles/backbone-refresher/</link>
       <pubDate>Tue, 14 Oct 2014 00:00:00 +0000</pubDate>
@@ -119,11 +196,6 @@
 &lt;h3 id=&quot;the-nature-of-backbone&quot;&gt;The Nature of Backbone&lt;/h3&gt;
 &lt;p&gt;Out of the box Backbone is an unopinionated library for bringing structure to an application. It provides you with data-modelling, bare-bone views and a router. That’s probably all you’re going to need for a small and simple application.&lt;/p&gt;
 &lt;p&gt;It’s unopinionated because it’s intended to be used as a foundation library rather than a framework.&lt;/p&gt;
-&lt;h4 id=&quot;is-backbone-mvp-&quot;&gt;Is Backbone MVP?&lt;/h4&gt;
-&lt;p&gt;As part of this refresher I will try and define what MVP (Model View Presenter) actually is.&lt;/p&gt;
-&lt;p&gt;A presenter can be defined as a logical entity that makes decisions on behalf of a view. The intention behind it is to provide improve the testability so the view
-should be dumbed down and delegate to its presenter.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2056/what-are-mvp-and-mvc-and-what-is-the-difference&quot;&gt;http://stackoverflow.com/questions/2056/what-are-mvp-and-mvc-and-what-is-the-difference&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;use-promises&quot;&gt;Use Promises&lt;/h3&gt;
 &lt;p&gt;Even if jQuery’s deferred objects aren’t A+ they’re still extremely useful in Backbone.&lt;/p&gt;
 &lt;p&gt;   model.save().then(success, failure)&lt;/p&gt;
@@ -133,9 +205,7 @@ should be dumbed down and delegate to its presenter.&lt;/p&gt;
 &lt;h3 id=&quot;marionette&quot;&gt;Marionette&lt;/h3&gt;
 &lt;h3 id=&quot;thorax&quot;&gt;Thorax&lt;/h3&gt;
 &lt;h3 id=&quot;chaplin&quot;&gt;Chaplin&lt;/h3&gt;
-&lt;p&gt;I would greet Chaplin with more enthusiasm if it weren’t for the fact that their source is written in CoffeeScript. It’s an obstacle for those who are unfamiliar with the syntax and have no need to learn it. Interestingly Jeremy Ashkenas, the creator of Backbone.js&lt;/p&gt;
-&lt;h3 id=&quot;phasellus-dictum-lectus-non-pharetra-pellentesqu&quot;&gt;Phasellus Dictum, Lectus non Pharetra Pellentesqu&lt;/h3&gt;
-&lt;p&gt;Phasellus dictum, lectus non pharetra pellentesque, libero ligula viverra sapien, et volutpat ante lectus ac nunc. Duis varius convallis risus, eget scelerisque justo hendrerit et.&lt;/p&gt;
+&lt;p&gt;I would greet Chaplin with more enthusiasm if it weren’t for the fact that their source is written in CoffeeScript.&lt;/p&gt;
 </description>
     </item>
     <item>

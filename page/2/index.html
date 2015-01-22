@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <title>Backbone - A Refresher - Backdesk
+    <title>Backdesk
     </title>
     <link rel="alternate" href="http://localhost:7777/feed.xml" type="application/rss+xml" title="Digital content done right">
     <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600|Lato:400,700,900|Roboto:400,300,100,700,500" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/css/font-awesome.css">
     <link rel="stylesheet" href="/css/main.css">
   </head>
-  <body class="article-detail">
+  <body>
     <header class="header">
       <div class="menu"><a href="#menu"><i class="fa fa-bars"></i></a></div>
       <div class="logo">
@@ -19,6 +19,11 @@
       </div>
     </header>
     <div class="wrapper">
+      <div class="banner">
+        <header>
+          <h3>I am a web veteran based in the South West of England, specializing in full stack JavaScript applications.</h3><a href="about-me.html" class="button">More About Me</a>
+        </header>
+      </div>
       <aside>
         <div class="side">
           <div class="about-me">
@@ -27,30 +32,15 @@
         </div>
       </aside>
       <main>
-        <article class="article">
+        <article class="article intro">
           <header>
-            <h2>Backbone - A Refresher</h2>
+            <h3><a href="/articles/mobile-first/">Mobile First, Does it Work?</a></h3>
           </header>
-          <section class="content"><p>I haven’t been actively using Backbone for a couple of months&nbsp;now.</p>
-<hr>
-<h3 id="the-nature-of-backbone">The Nature of&nbsp;Backbone</h3>
-<p>Out of the box Backbone is an unopinionated library for bringing structure to an application. It provides you with data-modelling, bare-bone views and a router. That’s probably all you’re going to need for a small and simple&nbsp;application.</p>
-<p>It’s unopinionated because it’s intended to be used as a foundation library rather than a&nbsp;framework.</p>
-<h3 id="use-promises">Use&nbsp;Promises</h3>
-<p>Even if jQuery’s deferred objects aren’t A+ they’re still extremely useful in&nbsp;Backbone.</p>
-<p>   model.save().then(success,&nbsp;failure)</p>
-<p>There’s nothing stopping you from adopting a different promise library. The point I wish to make is that it’s easy to get sucked into using events like ‘sync’ or callbacks and not seeing the light of day for a&nbsp;while.</p>
-<h3 id="modules">Modules</h3>
-<h3 id="boilerplates">Boilerplates</h3>
-<h3 id="marionette">Marionette</h3>
-<h3 id="thorax">Thorax</h3>
-<h3 id="chaplin">Chaplin</h3>
-<p>I would greet Chaplin with more enthusiasm if it weren’t for the fact that their source is written in&nbsp;CoffeeScript.</p>
-</section>
+          <section class="content"><p>Mauris iaculis, diam pharetra accumsan consequat, purus lacus pretium purus, eget vehicula nunc felis at mi. Sed pulvinar quam sit amet suscipit accumsan. Pellentesque venenatis feugiat&nbsp;nibh.</p>
+<small class="meta"><span class="meta">Posted 10th Jan 2014</span><span class="tags">
+                <!-- TODO: Move to mixin.--><a href="/tags/responsive.html" class="tag">responsive</a><a href="/tags/css.html" class="tag">css</a><a href="/tags/html5.html" class="tag">html5</a></span></small>
+          </section>
         </article>
-        <footer class="author">
-          <h4>About the author</h4><small class="author">James Gardner is a front-end specialist at Backdesk Solutions in Bath, UK. He's passionate about all things web with a special place in his heart for JavaScript.</small>
-        </footer>
       </main>
     </div>
     <footer class="footer">
