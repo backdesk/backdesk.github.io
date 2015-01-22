@@ -139,7 +139,10 @@ isolation [3]. We should then in theory be able to add new views when&nbsp;requi
 <p>[[
     Example of contextual data with business rules applied
     Show a Backbone.View conditionally rendering a template for this data&nbsp;]]</p>
-<p>We now have two ‘dumb views’ (templates) rendered conditionally by&nbsp;Backbone.View</p>
+<p>Two ‘dumb views’ (templates) rendered conditionally by&nbsp;Backbone.View</p>
+<p>The idea of templates being views is somewhat mythical. There will almost always be some kind of logic in a
+template - control logic at the very&nbsp;least.</p>
+<p>You can’t simplify your views without making them so simple they only function as partials within another&nbsp;view.</p>
 <p>Decision making and cross over of app&nbsp;domains.</p>
 <p><span class="caps">MVC</span> doesn’t seem to scale [4] in large applications. Too many&nbsp;entities.</p>
 <h3 id="marionette-controller">Marionette.Controller</h3>
