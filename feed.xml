@@ -9,6 +9,76 @@
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
     <item>
+      <title>Moving away from LinkedIn - Part 1</title>
+      <link>http://localhost:7777/articles/mongoose-populate/</link>
+      <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">http://localhost:7777/articles/mongoose-populate/</guid>
+      <author></author>
+      <description>&lt;p&gt;LinkedIn has brought some attention my way over the years but there are aspects of it that still make me uncomfortable.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;why-&quot;&gt;Why?&lt;/h3&gt;
+&lt;p&gt;A core motivation for running with my own resume is privacy. First of all, it seems like there are limited options on LinkedIn when it comes to controlling what aspects of your profile are visible to the outside world. You either have a public profile or you don’t. In addition to this there doesn’t appear to be a way to block individuals so there’s no preference over who can see my data beyond the public threshold.&lt;/p&gt;
+&lt;p&gt;What I would like to be able to do:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Control who views my resume&lt;/li&gt;
+&lt;li&gt;Control and even customize what can be seen on a per user basis&lt;/li&gt;
+&lt;li&gt;Have analytics track behavior so I can continuously improve&lt;/li&gt;
+&lt;li&gt;Provide an interactive layer (availability, questions etc)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Doesn’t seem like too much to ask for does it?&lt;/p&gt;
+&lt;h3 id=&quot;the-stack&quot;&gt;The Stack&lt;/h3&gt;
+&lt;p&gt;There’s no better way to boast about your expertise as a developer than to provide potential clients with examples of your work. Since my core focus is JavaScript I’ve chosen the following stack:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Server&lt;/th&gt;
+&lt;th&gt;Express&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Database&lt;/td&gt;
+&lt;td&gt;MongoDB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ODM&lt;/td&gt;
+&lt;td&gt;Mongoose&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Client&lt;/td&gt;
+&lt;td&gt;Backbone/Marionette&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Note: I will use a combination of Grunt and Webpack for build and deploy.&lt;/p&gt;
+&lt;h3 id=&quot;the-data&quot;&gt;The Data&lt;/h3&gt;
+&lt;p&gt;LinkedIn provides an API but I’ve not looked at in any great detail. Instead I just quickly needed a sensible JSON structure that contains everything. There are a few tools and formats around to do this. The basic format I’ve chosen is &lt;a href=&quot;https://jsonresume.org/schema/&quot;&gt;jsonresume&lt;/a&gt; and the tool I’m using to get at my data is &lt;a href=&quot;http://jmperezperez.com/linkedin-to-json-resume/&quot;&gt;linkedin to json resume&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This JSON document broken down into collections and stored in MongoDB:&lt;/p&gt;
+&lt;p&gt;[[DB DIAGRAM]]&lt;/p&gt;
+&lt;p&gt;Note: At this time I’m only looking at work experience and a single resume. So I’ve broken things down into two collections.&lt;/p&gt;
+&lt;h3 id=&quot;project-structure&quot;&gt;Project Structure&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;/models
+    |__ position.js
+    |__ resume.js
+
+/routes
+ package.json
+ app.js
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h3&gt;
+&lt;p&gt;Let’s create some Schemas for those two collections:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/james-gardner/5b2e6fd414fe696f7c36.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Note: Mongoose will look for a collection with a pluralized name unless told otherwise. So in MongoDB the collections will
+be referred to as ‘positions’ and ‘resumes’.&lt;/p&gt;
+&lt;p&gt;Since we don’t have any CRUD in place yet you will need some &lt;a href=&quot;https://gist.github.com/james-gardner/d28525e9c51d4896d2cd&quot;&gt;dummy data&lt;/a&gt; waiting in mongo.&lt;/p&gt;
+&lt;p&gt;I’m defining one main GET to retrive the entire resume:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/james-gardner/e33415d7f3cb7bc9153f.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Note: In the near future there will be multiple versions of my resume so this method will have to support querying them by a common parameter.&lt;/p&gt;
+&lt;p&gt;The resume document is populated with with any corresponding position documents.&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>Wrapping 'window.console'</title>
       <link>http://localhost:7777/articles/wrapping-console/</link>
       <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
@@ -29,7 +99,7 @@
       <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
       <guid isPermaLink="true">http://localhost:7777/articles/backbone-webpack/</guid>
       <author></author>
-      <description>&lt;p&gt;This is a very short guide demonstrating how to structure an application using Backbone and Webpack. &lt;/p&gt;
+      <description>&lt;p&gt;This is a very short guide demonstrating how to structure an application using Backbone and Webpack.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&quot;getting-started&quot;&gt;Getting started&lt;/h3&gt;
 &lt;p&gt;You can skip this part if you’re already familiar with installing packages using NPM and alternatively if you just want the package.json file you can find it &lt;a href=&quot;https://gist.github.com/james-gardner/e78d64453f30fc27ff49&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
@@ -44,7 +114,7 @@
 &lt;p&gt;As mentioned I will be using Webpack to bundle the JavaScript assets for the client application. The bundled assets (main.min.js) will eventually be served from a local webserver. Webpack can package up other assets like templates and stylesheets as well.&lt;/p&gt;
 &lt;script src=&quot;https://gist.github.com/james-gardner/4b13090baccb3649d65e.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;We could bring the various dependencies like underscore and backbone in through a CDN. In this example I will keep everything inclusive.&lt;/p&gt;
+&lt;p&gt;Note|: We could bring the various dependencies like underscore and backbone in through a CDN. In this example I’m keeping everything inclusive.&lt;/p&gt;
 &lt;h3 id=&quot;getting-to-work&quot;&gt;Getting to Work&lt;/h3&gt;
 &lt;p&gt;Let’s start with a basic view and template that we’ll use later on.&lt;/p&gt;
 &lt;script src=&quot;https://gist.github.com/james-gardner/34a6512a2d944a5abcf9.js&quot;&gt;&lt;/script&gt;
@@ -78,149 +148,6 @@
 --&gt;</description>
     </item>
     <item>
-      <title>A Guide to Contracting</title>
-      <link>http://localhost:7777/articles/contractors-guide/</link>
-      <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">http://localhost:7777/articles/contractors-guide/</guid>
-      <author></author>
-      <description>&lt;p&gt;Praesent quis felis at nulla venenatis tincidunt. Phasellus elementum ac magna a placerat. Proin hendrerit neque dapibus aliquam pharetra. Nunc sed libero vitae arcu pulvinar luctus a vitae risus. Sed viverra bibendum libero eget fermentum.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;phasellus-dictum-lectus-non-pharetra-pellentesqu&quot;&gt;Phasellus Dictum, Lectus non Pharetra Pellentesqu&lt;/h3&gt;
-&lt;p&gt;Phasellus dictum, lectus non pharetra pellentesque, libero ligula viverra sapien, et volutpat ante lectus ac nunc. Duis varius convallis risus, eget scelerisque justo hendrerit et. Phasellus rhoncus, neque ac congue lobortis, massa neque sodales sem, vel congue enim purus et purus. Proin eget neque rhoncus, feugiat erat eu, aliquam nunc. Vivamus quis ante et ex imperdiet convallis. Cras pellentesque eros est, nec imperdiet urna elementum quis. Integer blandit elit at nibh ornare, eu tincidunt lorem volutpat. Proin vel arcu lectus. Etiam vitae viverra orci. In ac sem iaculis, blandit lorem at, rutrum neque. Integer ac mi eget mi bibendum convallis.&lt;/p&gt;
-&lt;p&gt;Cras ut sagittis augue. Integer id semper orci. Praesent at dignissim tellus. Nunc non quam pretium, dictum metus quis, gravida sapien. In iaculis ornare varius. Aenean et nulla bibendum quam sodales venenatis in at neque. Fusce non leo quis tortor suscipit fringilla in non tellus. Fusce non enim ipsum. Phasellus id sapien id libero ultricies suscipit tempor et lectus. Proin ac sagittis nibh. Donec suscipit eu dui a faucibus.&lt;/p&gt;
-&lt;h3 id=&quot;sed-cursus-consequat-dapibus&quot;&gt;Sed Cursus Consequat Dapibus&lt;/h3&gt;
-&lt;p&gt;In vulputate lobortis accumsan. Aenean tincidunt vestibulum purus. In vulputate nec diam a pellentesque. Duis luctus ultrices velit id rutrum. Nam pharetra gravida ex, ullamcorper feugiat arcu tristique ac. Phasellus eget ligula nisi. Duis viverra metus eu tortor accumsan, at pulvinar tellus egestas. Donec ut lacus dolor.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Driving Github Pages with WinterSmith and Travis CI</title>
-      <link>http://localhost:7777/articles/wintersmith-github/</link>
-      <pubDate>Mon, 12 Jan 2015 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">http://localhost:7777/articles/wintersmith-github/</guid>
-      <author></author>
-      <description>&lt;p&gt;Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;vestibulum-ut-consequat-nibh-maecenas-malesuada-tortor-ut-nisi-mattis-porta&quot;&gt;Vestibulum ut consequat nibh. Maecenas malesuada tortor ut nisi mattis porta&lt;/h3&gt;
-&lt;p&gt;Donec eu auctor ante, ac molestie lorem. Vestibulum non mi tincidunt, commodo sapien in, egestas nunc. In eu ligula non diam scelerisque gravida ac sit amet orci. Sed sodales massa id tempus rutrum. Nullam volutpat finibus justo quis egestas. Suspendisse odio quam, tincidunt iaculis lacus sit amet, vestibulum tincidunt sem. In pellentesque, tellus eget porta aliquam, felis nibh consectetur urna, quis efficitur mi felis ut risus. Sed at arcu ultrices, scelerisque nulla in, molestie mauris. Maecenas tristique sit amet enim et lobortis. Nullam fringilla nec elit non posuere.&lt;/p&gt;
-&lt;h3 id=&quot;nam-vitae-nisi-ipsum-etiam-lobortis-fermentum-blandit&quot;&gt;Nam vitae nisi ipsum. Etiam lobortis fermentum blandit&lt;/h3&gt;
-&lt;p&gt;Ut varius orci quis ex facilisis, et convallis sem sodales. Praesent ultricies, eros condimentum bibendum luctus, est purus commodo enim, nec lacinia est nulla ut ipsum. Fusce vulputate scelerisque neque, vel ultricies nisl scelerisque a. Donec convallis laoreet ipsum id pharetra. Pellentesque ac dui in ante pulvinar sodales ullamcorper sed velit. Donec finibus commodo elit, a eleifend magna ultricies non. Morbi ultricies sollicitudin libero, a luctus nisi scelerisque sed. Etiam accumsan mauris at velit faucibus, egestas consequat lacus posuere. Praesent feugiat volutpat sapien, in sodales lorem luctus vehicula.&lt;/p&gt;
-&lt;h3 id=&quot;pero-quizas-tendras-mas&quot;&gt;Pero Quizas Tendras Mas&lt;/h3&gt;
-&lt;p&gt;Quisque egestas nulla et metus efficitur, nec imperdiet dui interdum. Aliquam in fermentum neque. Phasellus hendrerit urna tortor. Suspendisse sit amet neque non tortor mattis tincidunt. Mauris id dictum leo. Phasellus interdum fringilla suscipit. Pellentesque dapibus consequat sem, ut tristique ex luctus sed.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Backbone - MV ... What?</title>
-      <link>http://localhost:7777/articles/backbone-mvc-mvp/</link>
-      <pubDate>Tue, 14 Oct 2014 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">http://localhost:7777/articles/backbone-mvc-mvp/</guid>
-      <author></author>
-      <description>&lt;!--
-
-What are the high level responsibilities of each?
-
-    Controllers
-
-    &quot;Controller can be imagined as an extension or a personal assistant to the view, all the events
-    originated from the view are handled by the controller. Controller will also inform the Model on
-    behalf of view that some event happened on the view and some new data might be required.&quot;
-
-    http://www.codeproject.com/Articles/288928/Differences-between-MVC-and-MVP-for-Beginners
-
-
-    &quot;In the MVC, the Controller is responsible for determining which View is displayed in response to any
-    action including when the application loads. This differs from MVP where actions route through the View
-    to the Presenter. In MVC, every action in the View correlates with a call to a Controller along with an
-    action. In the web each action involves a call to a URL on the other side of which there is a Controller
-    who responds. Once that Controller has completed its processing, it will return the correct View.
-    The sequence continues in that manner throughout the life of the application&quot;
-
-    &quot;One other big difference about MVC is that the View does not directly bind to the Model. The view simply
-    renders, and is completely stateless. In implementations of MVC the View usually will not have any
-    logic in the code behind. This is contrary to MVP where it is absolutely necessary as if the View does
-    not delegate to the Presenter, it will never get called.&quot;
-
-    http://stackoverflow.com/questions/4733700/what-is-the-difference-between-controller-in-mvc-pattern-and-presenter-in-mvp-pa
-
-
-    &quot;In MVC, the view is updated only by the model (by listening to its events). It is never updated by the controller.
-    This is problematic when you need to format model data for the view, hence the need for MVP.&quot; - wrong?
-
-    http://stackoverflow.com/questions/4733700/what-is-the-difference-between-controller-in-mvc-pattern-and-presenter-in-mvp-pa
-
-
-    http://sourcemaking.com/refactoring/separate-domain-from-presentation
-
-    Presenters
-
-    In MVP the Presenter assumes the functionality of the &quot;middle-man&quot; (played by the Application Controller in MVC).
-    Additionally, the View is responsible for handling the UI events (like mouseDown, keyDown, etc), which used
-    to be the Controller's job. Eventually, the Model becomes strictly a Domain Model.
-
-    A presenter can be defined as a logical entity that makes decisions on behalf of a view. The intention behind it
-    is to provide improve the testability so the view should be dumbed down and delegate to its presenter.
-
-&quot;Although originally developed for desktop computing, model–view–controller has been widely adopted as an architecture
-for World Wide Web applications in major programming languages. Several commercial and noncommercial web application
-frameworks have been created that enforce the pattern. These frameworks vary in their interpretations, mainly in the
-way that the MVC responsibilities are divided between the client and server.&quot;
-
-http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
---&gt;
-
-&lt;h3 id=&quot;is-backbone-view-a-controller-&quot;&gt;Is Backbone.View a Controller?&lt;/h3&gt;
-&lt;p&gt;It’s tricky to find a ‘one size fits all’ definition of a controller and its responsibilities. Responsibilities
-are open to interpretation based on the platform [1] and framework you’re using. I think that the underlying
-principle rests at separating concerns. How a code base achieves this separation is what ultimately
-defines the role of a controller.&lt;/p&gt;
-&lt;p&gt;In a bare bone Backbone application ‘Backbone.View’ could be considered a controller as its logic drives a
-‘dumb view’ aspect using templates. Model events and user interactions are handled within the view logic
-and reflected in the rendered template.&lt;/p&gt;
-&lt;h3 id=&quot;scaling-complexity&quot;&gt;Scaling Complexity&lt;/h3&gt;
-&lt;p&gt;A primary gain from MVC should be that business logic can be presented in different ways and tested in
-isolation [3]. We should then in theory be able to add new views when required.&lt;/p&gt;
-&lt;p&gt;[[
-    Example of contextual data with business rules applied
-    Show a Backbone.View conditionally rendering a template for this data
-]]&lt;/p&gt;
-&lt;p&gt;Two ‘dumb views’ (templates) rendered conditionally by Backbone.View&lt;/p&gt;
-&lt;p&gt;The idea of templates being views is somewhat mythical. There will almost always be some kind of logic in a
-template - control logic at the very least.&lt;/p&gt;
-&lt;p&gt;You can’t simplify your views without making them so simple they only function as partials within another view.&lt;/p&gt;
-&lt;p&gt;Decision making and cross over of app domains.&lt;/p&gt;
-&lt;p&gt;MVC doesn’t seem to scale [4] in large applications. Too many entities.&lt;/p&gt;
-&lt;h3 id=&quot;marionette-controller&quot;&gt;Marionette.Controller&lt;/h3&gt;
-&lt;p&gt;Marionette [5]&lt;/p&gt;
-&lt;h3 id=&quot;controller-views&quot;&gt;Controller Views&lt;/h3&gt;
-&lt;p&gt;I tend to think of Backbone.View as a ‘Controller View’ type of actor where views can be nested within one another
-in a similar fashion to how they might appear within the DOM hierarchy.&lt;/p&gt;
-&lt;h2 id=&quot;marionette-layout&quot;&gt;Marionette.Layout&lt;/h2&gt;
-&lt;p&gt;For situations where you need to simply house a number of views within different regions.
-Prescriptively define the regions each view belongs to and render them.&lt;/p&gt;
-&lt;p&gt;Similar to setElement.&lt;/p&gt;
-&lt;!--
-
-This approach will get you quite far and bring structure and order beyond using standard page objects.
-
-
-
-Sub views
-    Views that conditionally render content within their own container.
-
-Layouts
-    Hook on to 'regions' of a template and assign views to regions.
-
-Controllers without internal view logic.
-    In other words logic that renders a conditionally renders a view based on state.
-    Not unlike a router.
-
-[1]
-[2]
-[3]
-[4] http://www.infoq.com/news/2014/05/facebook-mvc-flux
-[5] http://marionettejs.com/
---&gt;</description>
-    </item>
-    <item>
       <title>Backbone - A Refresher</title>
       <link>http://localhost:7777/articles/backbone-refresher/</link>
       <pubDate>Tue, 14 Oct 2014 00:00:00 +0000</pubDate>
@@ -241,21 +168,6 @@ Controllers without internal view logic.
 &lt;h3 id=&quot;thorax&quot;&gt;Thorax&lt;/h3&gt;
 &lt;h3 id=&quot;chaplin&quot;&gt;Chaplin&lt;/h3&gt;
 &lt;p&gt;I would greet Chaplin with more enthusiasm if it weren’t for the fact that their source is written in CoffeeScript.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Mobile First, Does it Work?</title>
-      <link>http://localhost:7777/articles/mobile-first/</link>
-      <pubDate>Fri, 10 Jan 2014 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">http://localhost:7777/articles/mobile-first/</guid>
-      <author></author>
-      <description>&lt;p&gt;Mauris iaculis, diam pharetra accumsan consequat, purus lacus pretium purus, eget vehicula nunc felis at mi. Sed pulvinar quam sit amet suscipit accumsan. Pellentesque venenatis feugiat nibh.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;aenean-finibus-turpis-id-tempor-viverra-donec-mattis-massa-ullamcorper-gravida-iaculis-&quot;&gt;Aenean finibus turpis id tempor viverra. Donec mattis massa ullamcorper gravida iaculis.&lt;/h3&gt;
-&lt;p&gt;Fusce congue nulla sed nisi tristique, in semper enim sagittis. Vivamus aliquam nunc elit, vitae molestie turpis auctor sed. Aenean bibendum, sem congue posuere semper, orci orci sollicitudin eros, in lacinia nulla quam ultrices mauris. Quisque elementum nulla purus, ut condimentum arcu vehicula nec. Nunc faucibus enim tortor, id porta diam aliquam vitae. Phasellus fermentum odio nec justo pulvinar tincidunt. In mattis lacinia maximus. Vivamus sagittis urna vel turpis sagittis, ac venenatis erat volutpat.&lt;/p&gt;
-&lt;h3 id=&quot;suspendisse-tempor-porttitor-diam-rutrum-auctor-lorem-mattis-quis-&quot;&gt;Suspendisse tempor porttitor diam, rutrum auctor lorem mattis quis.&lt;/h3&gt;
-&lt;p&gt;Suspendisse tempor porttitor diam, rutrum auctor lorem mattis quis. Etiam maximus iaculis faucibus. Etiam a interdum tortor. Nullam a molestie dui. Nulla quis sapien a nibh lobortis placerat ac non quam. Vestibulum a ligula ut ipsum condimentum congue molestie vitae tortor. Nullam convallis eu erat sed ullamcorper. Maecenas et cursus velit. Vivamus et finibus urna. Morbi at ligula eget lectus varius ullamcorper suscipit vitae sem. Etiam ornare mi sit amet tortor congue, et rhoncus ante finibus. Suspendisse et molestie tellus. Integer nec finibus nunc, id lobortis augue. Curabitur eget pulvinar lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus.&lt;/p&gt;
-&lt;p&gt;Quisque ornare erat id purus dictum, ac ultricies nulla consectetur. Suspendisse vestibulum dignissim purus, vel lacinia lorem. Phasellus a porta est. Mauris feugiat sem ligula, eu blandit enim tempor in. Quisque porttitor dui sed varius dapibus. Suspendisse mollis velit arcu, sit amet faucibus lacus porttitor quis. Curabitur laoreet, odio ut malesuada ultricies, nunc eros ultricies ipsum, ut pulvinar ex nunc id arcu.&lt;/p&gt;
 </description>
     </item>
   </channel>

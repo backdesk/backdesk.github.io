@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Moving away from LinkedIn - Part 1 - Backdesk
+    </title>
+    <link rel="alternate" href="http://localhost:7777/feed.xml" type="application/rss+xml" title="Digital content done right">
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600|Lato:400,700,900|Roboto:400,300,100,700,500" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="menu"><a href="#menu"><i class="fa fa-bars"></i></a></div>
+      <div class="logo">
+        <h1><a href="/">Backdesk</a></h1>
+      </div>
+    </header>
+    <div class="wrapper">
+      <aside>
+        <div class="side">
+          <div class="about-me">
+            <h3>I am a web veteran based in the South West of England, specializing in full stack JavaScript applications.</h3><a href="about-me.html" class="button">More About Me</a>
+          </div>
+        </div>
+      </aside>
+      <main>
+        <article class="article">
+          <header>
+            <h2>Moving away from LinkedIn - Part 1</h2>
+          </header>
+          <section class="content"><p>LinkedIn has brought some attention my way over the years but there are aspects of it that still make me&nbsp;uncomfortable.</p>
+<hr>
+<h3 id="why-">Why?</h3>
+<p>A core motivation for running with my own resume is privacy. First of all, it seems like there are limited options on LinkedIn when it comes to controlling what aspects of your profile are visible to the outside world. You either have a public profile or you don’t. In addition to this there doesn’t appear to be a way to block individuals so there’s no preference over who can see my data beyond the public&nbsp;threshold.</p>
+<p>What I would like to be able to&nbsp;do:</p>
+<ul>
+<li>Control who views my&nbsp;resume</li>
+<li>Control and even customize what can be seen on a per user&nbsp;basis</li>
+<li>Have analytics track behavior so I can continuously&nbsp;improve</li>
+<li>Provide an interactive layer (availability, questions&nbsp;etc)</li>
+</ul>
+<p>Doesn’t seem like too much to ask for does&nbsp;it?</p>
+<h3 id="the-stack">The&nbsp;Stack</h3>
+<p>There’s no better way to boast about your expertise as a developer than to provide potential clients with examples of your work. Since my core focus is JavaScript I’ve chosen the following&nbsp;stack:</p>
+<table>
+<thead>
+<tr>
+<th>Server</th>
+<th>Express</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Database</td>
+<td>MongoDB</td>
+</tr>
+<tr>
+<td><span class="caps">ODM</span></td>
+<td>Mongoose</td>
+</tr>
+<tr>
+<td>Client</td>
+<td>Backbone/Marionette</td>
+</tr>
+</tbody>
+</table>
+<p>Note: I will use a combination of Grunt and Webpack for build and&nbsp;deploy.</p>
+<h3 id="the-data">The&nbsp;Data</h3>
+<p>LinkedIn provides an <span class="caps">API</span> but I’ve not looked at in any great detail. Instead I just quickly needed a sensible JSON structure that contains everything. There are a few tools and formats around to do this. The basic format I’ve chosen is <a href="https://jsonresume.org/schema/">jsonresume</a> and the tool I’m using to get at my data is <a href="http://jmperezperez.com/linkedin-to-json-resume/">linkedin to json resume</a>.</p>
+<p>This <span class="caps">JSON</span> document broken down into collections and stored in&nbsp;MongoDB:</p>
+<p>[[<span class="caps">DB</span>&nbsp;DIAGRAM]]</p>
+<p>Note: At this time I’m only looking at work experience and a single resume. So I’ve broken things down into two&nbsp;collections.</p>
+<h3 id="project-structure">Project&nbsp;Structure</h3>
+<pre><code>/models
+    |__ position.js
+    |__ resume.js
+
+/routes
+ package.json
+ app.js
+</code></pre><h3 id="getting-started">Getting&nbsp;Started</h3>
+<p>Let’s create some Schemas for those two&nbsp;collections:</p>
+<script src="https://gist.github.com/james-gardner/5b2e6fd414fe696f7c36.js"></script>
+
+<p>Note: Mongoose will look for a collection with a pluralized name unless told otherwise. So in MongoDB the collections will
+be referred to as ‘positions’ and&nbsp;‘resumes’.</p>
+<p>Since we don’t have any <span class="caps">CRUD</span> in place yet you will need some <a href="https://gist.github.com/james-gardner/d28525e9c51d4896d2cd">dummy data</a> waiting in&nbsp;mongo.</p>
+<p>I’m defining one main <span class="caps">GET</span> to retrive the entire&nbsp;resume:</p>
+<script src="https://gist.github.com/james-gardner/e33415d7f3cb7bc9153f.js"></script>
+
+<p>Note: In the near future there will be multiple versions of my resume so this method will have to support querying them by a common&nbsp;parameter.</p>
+<p>The resume document is populated with with any corresponding position&nbsp;documents.</p>
+</section>
+        </article>
+        <footer class="author">
+          <h4>About the author</h4><small class="author">James Gardner is a front-end specialist at Backdesk Solutions in Bath, UK. He's passionate about all things web with a special place in his heart for JavaScript.</small>
+        </footer>
+      </main>
+    </div>
+    <footer class="footer">
+      <section class="about"><span class="social"><a href="" target="blank"><i class="fa fa-facebook"></i></a><a href="" target="blank"><i class="fa fa-twitter"></i></a><a href="https://github.com/backdesk" target="blank"><i class="fa fa-github"></i></a><a href="https://uk.linkedin.com/pub/james-gardner/4a/793/233" target="blank"><i class="fa fa-linkedin"></i></a></span><small>
+          Backdesk Solutions is a limited company registered in England and Wales. 
+          Company registration No. 09224652. VAT registration No. 200147179.</small></section>
+      <section class="copy"><small>&copy; 2015 Backdesk Solutions Ltd</small></section>
+    </footer>
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="/scripts/backdesk.js"></script>
+    <script src="/scripts/tracking.js"></script>
+  </body>
+</html>

@@ -34,6 +34,15 @@
       <main>
         <article class="article intro">
           <header>
+            <h3><a href="/articles/mongoose-populate/">Moving away from LinkedIn - Part 1</a></h3>
+          </header>
+          <section class="content"><p>LinkedIn has brought some attention my way over the years but there are aspects of it that still make me&nbsp;uncomfortable.</p>
+<small class="meta"><span class="meta">Posted 21st Jan 2015</span><span class="tags">
+                <!-- TODO: Move to mixin.--><a href="/tags/javascript.html" class="tag">javascript</a><a href="/tags/snippet.html" class="tag">snippet</a></span></small>
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <h3><a href="/articles/wrapping-console/">Wrapping 'window.console'</a></h3>
           </header>
           <section class="content"><p>I try and keep console usage like ‘.log’ to a minimum and use breakpoints where possible. There are lots of other useful console methods available to us but I would like to be able to be able to toggle those on and&nbsp;off.</p>
@@ -45,113 +54,9 @@
           <header>
             <h3><a href="/articles/backbone-webpack/">Using Backbone with Webpack</a></h3>
           </header>
-          <section class="content"><p>This is a very short guide demonstrating how to structure an application using Backbone and&nbsp;Webpack. </p>
+          <section class="content"><p>This is a very short guide demonstrating how to structure an application using Backbone and&nbsp;Webpack.</p>
 <small class="meta"><span class="meta">Posted 20th Jan 2015</span><span class="tags">
                 <!-- TODO: Move to mixin.--><a href="/tags/backbone.html" class="tag">backbone</a><a href="/tags/javascript.html" class="tag">javascript</a><a href="/tags/webpack.html" class="tag">webpack</a></span></small>
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <h3><a href="/articles/contractors-guide/">A Guide to Contracting</a></h3>
-          </header>
-          <section class="content"><p>Praesent quis felis at nulla venenatis tincidunt. Phasellus elementum ac magna a placerat. Proin hendrerit neque dapibus aliquam pharetra. Nunc sed libero vitae arcu pulvinar luctus a vitae risus. Sed viverra bibendum libero eget&nbsp;fermentum.</p>
-<small class="meta"><span class="meta">Posted 20th Jan 2015</span><span class="tags">
-                <!-- TODO: Move to mixin.--><a href="/tags/backdesk.html" class="tag">backdesk</a></span></small>
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <h3><a href="/articles/wintersmith-github/">Driving Github Pages with WinterSmith and Travis CI</a></h3>
-          </header>
-          <section class="content"><p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse&nbsp;eu.</p>
-<small class="meta"><span class="meta">Posted 12th Jan 2015</span><span class="tags">
-                <!-- TODO: Move to mixin.--><a href="/tags/javascript.html" class="tag">javascript</a><a href="/tags/css.html" class="tag">css</a><a href="/tags/html5.html" class="tag">html5</a></span></small>
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <h3><a href="/articles/backbone-mvc-mvp/">Backbone - MV ... What?</a></h3>
-          </header>
-          <section class="content"><!--
-
-What are the high level responsibilities of each?
-
-    Controllers
-
-    "Controller can be imagined as an extension or a personal assistant to the view, all the events
-    originated from the view are handled by the controller. Controller will also inform the Model on
-    behalf of view that some event happened on the view and some new data might be required."
-
-    http://www.codeproject.com/Articles/288928/Differences-between-MVC-and-MVP-for-Beginners
-
-
-    "In the MVC, the Controller is responsible for determining which View is displayed in response to any
-    action including when the application loads. This differs from MVP where actions route through the View
-    to the Presenter. In MVC, every action in the View correlates with a call to a Controller along with an
-    action. In the web each action involves a call to a URL on the other side of which there is a Controller
-    who responds. Once that Controller has completed its processing, it will return the correct View.
-    The sequence continues in that manner throughout the life of the application"
-
-    "One other big difference about MVC is that the View does not directly bind to the Model. The view simply
-    renders, and is completely stateless. In implementations of MVC the View usually will not have any
-    logic in the code behind. This is contrary to MVP where it is absolutely necessary as if the View does
-    not delegate to the Presenter, it will never get called."
-
-    http://stackoverflow.com/questions/4733700/what-is-the-difference-between-controller-in-mvc-pattern-and-presenter-in-mvp-pa
-
-
-    "In MVC, the view is updated only by the model (by listening to its events). It is never updated by the controller.
-    This is problematic when you need to format model data for the view, hence the need for MVP." - wrong?
-
-    http://stackoverflow.com/questions/4733700/what-is-the-difference-between-controller-in-mvc-pattern-and-presenter-in-mvp-pa
-
-
-    http://sourcemaking.com/refactoring/separate-domain-from-presentation
-
-    Presenters
-
-    In MVP the Presenter assumes the functionality of the "middle-man" (played by the Application Controller in MVC).
-    Additionally, the View is responsible for handling the UI events (like mouseDown, keyDown, etc), which used
-    to be the Controller's job. Eventually, the Model becomes strictly a Domain Model.
-
-    A presenter can be defined as a logical entity that makes decisions on behalf of a view. The intention behind it
-    is to provide improve the testability so the view should be dumbed down and delegate to its presenter.
-
-"Although originally developed for desktop computing, model–view–controller has been widely adopted as an architecture
-for World Wide Web applications in major programming languages. Several commercial and noncommercial web application
-frameworks have been created that enforce the pattern. These frameworks vary in their interpretations, mainly in the
-way that the MVC responsibilities are divided between the client and server."
-
-http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
--->
-
-<h3 id="is-backbone-view-a-controller-">Is Backbone.View a&nbsp;Controller?</h3>
-<p>It’s tricky to find a ‘one size fits all’ definition of a controller and its responsibilities. Responsibilities
-are open to interpretation based on the platform [1] and framework you’re using. I think that the underlying
-principle rests at separating concerns. How a code base achieves this separation is what ultimately
-defines the role of a&nbsp;controller.</p>
-<p>In a bare bone Backbone application ‘Backbone.View’ could be considered a controller as its logic drives a
-‘dumb view’ aspect using templates. Model events and user interactions are handled within the view logic
-and reflected in the rendered&nbsp;template.</p>
-<h3 id="scaling-complexity">Scaling&nbsp;Complexity</h3>
-<p>A primary gain from <span class="caps">MVC</span> should be that business logic can be presented in different ways and tested in
-isolation [3]. We should then in theory be able to add new views when&nbsp;required.</p>
-<p>[[
-    Example of contextual data with business rules applied
-    Show a Backbone.View conditionally rendering a template for this data&nbsp;]]</p>
-<p>Two ‘dumb views’ (templates) rendered conditionally by&nbsp;Backbone.View</p>
-<p>The idea of templates being views is somewhat mythical. There will almost always be some kind of logic in a
-template - control logic at the very&nbsp;least.</p>
-<p>You can’t simplify your views without making them so simple they only function as partials within another&nbsp;view.</p>
-<p>Decision making and cross over of app&nbsp;domains.</p>
-<p><span class="caps">MVC</span> doesn’t seem to scale [4] in large applications. Too many&nbsp;entities.</p>
-<h3 id="marionette-controller">Marionette.Controller</h3>
-<p>Marionette&nbsp;[5]</p>
-<h3 id="controller-views">Controller&nbsp;Views</h3>
-<p>I tend to think of Backbone.View as a ‘Controller View’ type of actor where views can be nested within one another
-in a similar fashion to how they might appear within the <span class="caps">DOM</span>&nbsp;hierarchy.</p>
-<small class="meta"><span class="meta">Posted 14th Oct 2014</span><span class="tags">
-                <!-- TODO: Move to mixin.--><a href="/tags/javascript.html" class="tag">javascript</a><a href="/tags/backbone.html" class="tag">backbone</a><a href="/tags/html5.html" class="tag">html5</a></span></small>
           </section>
         </article>
         <article class="article intro">
