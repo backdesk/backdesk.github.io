@@ -1,0 +1,13 @@
+aside {
+	.social {
+		a {
+			font-size: 2em;
+			color: rgb(83, 83, 83);
+			transition: color 0.2s ease-in;
+		}
+
+		a:hover {
+			color: #2FB0C9;
+		}
+	}
+}

@@ -12,26 +12,19 @@
     <link rel="stylesheet" href="/css/main.css">
   </head>
   <body class="article-detail">
-    <header class="header">
-      <div class="menu"><a href="#menu"><i class="fa fa-bars"></i></a></div>
-      <div class="logo">
-        <h1><a href="/">Backdesk</a></h1>
+    <nav>
+      <div class="links">
+        <h1>BACKDESK</h1><a href="#">About Me</a><a href="#">Latest News</a><a href="#">Get in Touch</a><a href="#">Clients</a>
       </div>
-    </header>
+    </nav>
     <div class="wrapper">
-      <aside>
-        <div class="side">
-          <div class="about-me">
-            <h3>I am a web veteran based in the South West of England, specializing in full stack JavaScript applications.</h3><a href="about-me.html" class="button">More About Me</a>
-          </div>
-        </div>
-      </aside>
-      <main>
-        <article class="article">
-          <header>
-            <h2>Backbone - A Refresher</h2>
-          </header>
-          <section class="content"><p>I haven’t been actively using Backbone for a couple of months&nbsp;now.</p>
+      <div class="outer">
+        <main>
+          <article class="article">
+            <header>
+              <h2>Backbone - A Refresher</h2>
+            </header>
+            <section class="content"><p>I haven’t been actively using Backbone for a couple of months&nbsp;now.</p>
 <hr>
 <h3 id="the-nature-of-backbone">The Nature of&nbsp;Backbone</h3>
 <p>Out of the box Backbone is an unopinionated library for bringing structure to an application. It provides you with data-modelling, bare-bone views and a router. That’s probably all you’re going to need for a small and simple&nbsp;application.</p>
@@ -47,18 +40,32 @@
 <h3 id="chaplin">Chaplin</h3>
 <p>I would greet Chaplin with more enthusiasm if it weren’t for the fact that their source is written in&nbsp;CoffeeScript.</p>
 </section>
-        </article>
-        <footer class="author">
-          <h4>About the author</h4><small class="author">James Gardner is a front-end specialist at Backdesk Solutions in Bath, UK. He's passionate about all things web with a special place in his heart for JavaScript.</small>
-        </footer>
-      </main>
+          </article>
+          <footer class="author">
+            <h4>About the author</h4><small class="author">James Gardner is a front-end specialist at Backdesk Solutions in Bath, UK. He's passionate about all things web with a special place in his heart for JavaScript.</small>
+          </footer>
+        </main>
+        <aside>
+          <div class="side-block intro">
+            <div class="say-cheese"></div>
+            <div class="social"><a href="#" class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-github fa-stack-1x fa-inverse"></i></a><a href="#" class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></a><a href="#" class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></a><a href="#" class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-google-plus fa-stack-1x fa-inverse"></i></a></div>
+            <p class="intro">I am a web veteran based in the South West of England, specializing in full stack JavaScript applications.</p>
+          </div>
+          <div class="side-block">
+            <h3>Currently Reading</h3>
+            <ul>
+              <li>Mastering Web Application Development with AngularJS - <i>Pawel Kozlowski</i></li>
+              <li>Functional JavaScript - <i>Michael Fogus</i></li>
+              <li>The Age of Spiritual Machines - <i>Ray Kurzweil</i></li>
+            </ul>
+          </div>
+          <div class="side-block">
+            <h3>Popular Tags</h3>
+            <div class="tags"><a href="#">jQuery</a><a href="#">Backbone</a><a href="#">AngularJS</a><a href="#">Marionette</a><a href="#">NodeJS</a><a href="#">Knockout</a><a href="#">Underscore</a><a href="#">Jasmine</a><a href="#">Grunt</a><a href="#">ExpressJS</a><a href="#">JavaScript</a><a href="#">WebPack</a><a href="#">RequireJS</a><a href="#">HTML5</a></div>
+          </div>
+        </aside>
+      </div>
     </div>
-    <footer class="footer">
-      <section class="about"><span class="social"><a href="" target="blank"><i class="fa fa-facebook"></i></a><a href="" target="blank"><i class="fa fa-twitter"></i></a><a href="https://github.com/backdesk" target="blank"><i class="fa fa-github"></i></a><a href="https://uk.linkedin.com/pub/james-gardner/4a/793/233" target="blank"><i class="fa fa-linkedin"></i></a></span><small>
-          Backdesk Solutions is a limited company registered in England and Wales. 
-          Company registration No. 09224652. VAT registration No. 200147179.</small></section>
-      <section class="copy"><small>&copy; 2015 Backdesk Solutions Ltd</small></section>
-    </footer>
     <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="/scripts/backdesk.js"></script>
     <script src="/scripts/tracking.js"></script>
